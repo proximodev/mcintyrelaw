@@ -19,7 +19,7 @@ function my_acf_init() {
             'keywords'          => array( 'media', 'video', 'youtube' ),
             'post_types'        => array('post', 'page'),
             'mode'              => 'edit',
-            'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
+            //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
         ));
 
     }
