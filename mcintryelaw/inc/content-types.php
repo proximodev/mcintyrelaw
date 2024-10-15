@@ -1,7 +1,7 @@
 <?php
 /**
- * Custom Content Types
- */
+* Custom Content Types
+*/
 
 
 ?>

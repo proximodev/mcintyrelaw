@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Shortcodes
- */
+* Custom Shortcodes
+*/
 
 ?>
