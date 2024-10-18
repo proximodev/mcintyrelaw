@@ -1,0 +1,24 @@
+{
+  "name": "Lmn",
+  "scripts": {
+  },
+  "env": {
+    "NODE_ENV": "heroku",
+    "NPM_CONFIG_PRODUCTION": "false",
+    "ROOT_FOLDER": ".",
+    "ASSETS_FOLDER": "assets",
+    "DIST_FOLDER": "public",
+    "IMAGES_FOLDER": "images",
+    "MINIFY": "true"
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

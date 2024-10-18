@@ -1,0 +1,88 @@
+.modal-default
+  position fixed
+  top 0
+  left 0
+  z-index 11
+  display flex
+  visibility hidden
+  justify-content center
+  align-items center
+  width 100%
+  height 100%
+  background rgba(#000, .6)
+  opacity 0
+  tro(.25s)
+  &._open
+    visibility visible
+    opacity 1
+  &__inner
+    position relative
+    overflow: hidden
+    padding 3rem
+    width 190rem
+    max-width: 90vw
+    height calc(100vh - 100px)
+    max-height: 65vw
+  &__top  
+    position absolute
+    left 0
+    top 0
+    background: $black
+    height 10%
+    width 100%
+  &__close
+    position absolute
+    top 0
+    right .6rem
+    z-index 1
+    width 2.4rem
+    height 2.4rem
+    padding 0
+    background-color: transparent !important
+    &:before,
+    &:after
+      ps()
+      top 0
+      left 1.3rem
+      width .2rem
+      height 2.4rem
+      background $light
+    &:before
+      transform rotate(45deg)
+    &:after
+      transform rotate(-45deg)
+    .desktop &
+      tro()
+      &:hover
+        opacity .75
+  &__content
+  &__video
+    height: 100%
+    video
+    iframe
+      backface-visibility hidden
+      max-height: 100%
+      width 100%
+    img 
+      width 100%
+      height 100%
+      object-fit: contain  
+
++media-tablet()
+  .modal-default
+    cursor pointer
+    &__close
+      transform scale(.75)
+  
+@media only screen and (max-height 600px)
+  .modal-default
+    &__inner
+      max-height 100vh
+      max-width: 75vw
+      padding 2rem
+
++media-mobile(480px)
+  .modal-default
+    &__inner
+      max-width: 100%
+      padding 2rem

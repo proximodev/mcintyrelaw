@@ -1,0 +1,39 @@
+html 
+  font-size 16px
+  scroll-behavior: smooth;
+  &._scroll-unset
+    scroll-behavior: unset;
+
+html, body
+  max-width 100%
+  
+body  
+  overflow-x: hidden
+  *
+    defaultFontFamily()
+
+  h1,h2,h3,h4,h5,h6 
+    titleFontFamily()
+
+h1 
+  font-size: 86px
+
+h2 
+  font-size: 60px  
+
+h3 
+  font-size: 40px
+
+h4 
+  font-size: 35px  
+
+h5 
+  font-size: 25px
+
+  
++media-mobile()  
+  h1 
+    font-size: 45px
+
+  h2 
+    font-size: 50px  

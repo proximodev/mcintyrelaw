@@ -1,0 +1,25 @@
+include bemto.pug
+include mixins.pug
+include functions.pug
+include scripts.pug
+- var { ROOT_FOLDER, IMAGES_FOLDER, WEBSITE_URL } = process.env;
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    base(href='/')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    title #{PAGEINFO.title}
+    meta(name='description' content=`${PAGEINFO.description}`)
+
+    link(rel='icon' href='/assets/images/icon.png')
+    link(href='assets/css/common.css' rel='stylesheet')
+    //- link(href='assets/css/style.css' rel='stylesheet')
+
+    block globalVars
+
+  block content

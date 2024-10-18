@@ -1,0 +1,15 @@
+{
+  "yt": {
+    "className": "modal-video",
+    "yt": "W9A8fsDN1kU"
+  },
+  "video": {
+    "className": "modal-video",
+    "video": "videos/envideo1.mp4"
+  },
+  "gallery": {
+    "className": "_light modal-gallery",
+    "view": "gallery"
+  }
+}
+

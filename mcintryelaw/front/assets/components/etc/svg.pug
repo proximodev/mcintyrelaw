@@ -1,0 +1,11 @@
+mixin svg(o = {})
+  - var ariaLabelled = o.title ? `${(o.name + '-' + o.title).replace('&','-').split(' ').join('').toLowerCase()}` : false;
+
+  svg.svg(
+  class=`svg-${o.name} ${o.className || ''}`,
+  focusable='false',
+  role='img',
+  aria-labelledby=ariaLabelled)
+    if o.title
+      title(id=`${ariaLabelled}`) #{o.title}
+    use(xlink:href=`images/sprite-svg.svg#${o.name}`)

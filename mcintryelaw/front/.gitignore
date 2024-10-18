@@ -1,0 +1,11 @@
+# Directories
+
+node_modules
+build
+dist
+typechain
+.vscode
+# Files
+.env
+.idea
+*.DS_Store

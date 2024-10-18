@@ -1,0 +1,164 @@
+mixin picture(o = {})
+  //- OPTIONS
+
+    Full version
+      img - require => OBJECT
+      ├── Src - require => STRING
+      ├── className- optional => STRING
+      ├── Alt - require => STRING
+      ├── Srcset - require => ARRAY OF STRING
+      └── Sizes - optional => ARRAY OF STRING
+      sources - require => ARRAY OF OBJECTS
+      ├── Srcset - require => ARRAY OF STRING
+      ├── Sizes - optional => ARRAY OF STRING
+      ├── Media - optional => STRING
+      └── Type - optional => STRING
+
+    Short Version
+      img - require => OBJECT
+      ├── Src - require => STRING
+      ├── className- optional => STRING
+      ├── Alt - require => STRING
+      ├── Srcset - require => ARRAY OF STRING
+      └── Sizes - optional => ARRAY OF STRING
+
+    If you need pass any additional attributes for img use &attributes(),
+    for example: +picture({})(data-object-fit='cover')
+
+    Supported filename format for dimensions detect:
+      -<width>: image-100.png
+      -<width>x: image-100x.png
+      -<width>x<height>: image-100x200.png
+      -x<height>: image-x200.png
+      -<width>x<height>@<scale>x: image-100x200@2x.png
+      @<scale>x: image@2x.png
+
+    Usage example
+
+      +picture({
+          img: {
+            src: 'space-300x400.jpeg',
+            alt: 'Device pixel ratio',
+            srcset: [
+              'space-300x400@2x.jpeg 2x'
+            ]
+          }
+      })
+      ------------------
+      +picture({
+        img: {
+          src: 'star.jpg',
+          alt: 'Sizes',
+          srcset: [
+            'star-200.jpg 200w',
+            'star-400.jpg 400w',
+            'star-800.jpg 800w',
+            'star-1600.jpg 1600w'
+          ],
+          sizes: [
+            '(max-width: 400px) 100vw',
+            '(max-width: 800px) 75vw',
+            'calc(50vw + 100px)'
+          ]
+        }
+      })
+      ------------------
+      +picture({
+        sources: [
+          {
+            srcset: [
+              'spacex-200.jpg 200w',
+              'spacex-400.jpg 400w',
+              'spacex-800.jpg 800w',
+              'spacex-1200.jpg 1200w'
+            ],
+            sizes: ['50vw'],
+            media: '(min-width: 1280px)'
+          }
+        ],
+        img: {
+          src: 'spacex-400.jpg',
+          alt: 'Full version',
+          srcset: [
+            'spacex-200.jpg 200w',
+            'spacex-400.jpg 400w',
+            'spacex-800.jpg 800w',
+            'spacex-1200.jpg 1200w'
+          ],
+          sizes: [
+            '(min-width: 640px) 75vw',
+            '100vw'
+          ]
+        }
+      })
+
+  - var c = (i) => {return i > 0 ? ', ' : ''}
+
+  mixin image(io)
+    - var io = io || {}
+    - var iSR = io.img.srcset
+    - var className = io.img.className
+    - var iS = io.img.sizes
+    - var iAttr = io.attr
+    - var iAlt = io.img.alt
+    - var iPath = `${ROOT_FOLDER}/${IMAGES_FOLDER}/${io.img.src}`
+
+    if iSR
+      - var iSRCSET = ''
+      each it, i in iSR
+        - iSRCSET += `${c(i) + ROOT_FOLDER}/${ASSETS_FOLDER}/${IMAGES_FOLDER}/${it}`
+    if iS
+      - var iSIZES = ''
+      each it, i in iS
+        - iSIZES += c(i) + it
+
+    if iSR && iS
+      img(src=iPath class=className srcset=iSRCSET sizes=iSIZES alt=iAlt)&attributes(iAttr)
+    else if iSR
+      img(src=iPath class=className srcset=iSRCSET alt=iAlt)&attributes(iAttr)
+    else if iS
+      img(src=iPath class=className sizes=iSIZES alt=iAlt)&attributes(iAttr)
+    else
+      img(src=iPath class=className alt=iAlt)&attributes(iAttr)
+
+  if o.sources
+    picture
+      each s in o.sources
+        - var sSR = s.srcset
+        - var sS = s.sizes
+        - var sM = s.media
+        - var sT = s.type
+
+        if sSR
+          - var sSRCSET = ''
+          each it, i in sSR
+            - sSRCSET += `${c(i) + ROOT_FOLDER}/${IMAGES_FOLDER}/${it}`
+
+        if sS
+          - var sSIZES = ''
+          each it, i in sS
+            - sSIZES += c(i) + it
+
+        if sS && sM && sT
+          source(srcset=sSRCSET sizes=sSIZES media=sM type=sT)
+        else if sS && sM
+          source(srcset=sSRCSET sizes=sSIZES media=sM)
+        else if sS && sT
+          source(srcset=sSRCSET sizes=sSIZES type=sT)
+        else if sM && sT
+          source(srcset=sSRCSET media=sM type=sT)
+        else if sS
+          source(srcset=sSRCSET sizes=sSIZES)
+        else if sM
+          source(srcset=sSRCSET media=sM)
+        else if sT
+          source(srcset=sSRCSET type=sT)
+      +image({
+        img: o.img,
+        attr: attributes
+      })
+  else
+    +image({
+      img: o.img,
+      attr: attributes
+    })

@@ -1,0 +1,7 @@
+mixin scripts(o = {})
+
+  if o.scripts
+    each script in o.scripts
+      script(src=`${script}`)
+      
+  script(src='assets/js/app.js')    

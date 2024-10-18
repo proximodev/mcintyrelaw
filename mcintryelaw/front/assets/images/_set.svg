@@ -1,0 +1,10 @@
+<svg class="svg-templates" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<symbol id="arrow-left" viewBox="0 0 45 45">
+    <path d="M25 15l-9 8 9 7.5" stroke="currentColor"/>
+    <circle cx="22.5" cy="22.5" r="22" stroke="currentColor"/>
+</symbol>
+<symbol id="arrow-right" viewBox="0 0 45 45">
+    <circle cx="22.5" cy="22.5" r="22" stroke="currentColor"/>
+    <path d="M20 30.5l9-8-9-7.5" stroke="currentColor"/>
+</symbol>
+</svg>

@@ -1,0 +1,8 @@
+- var cap = str => str.slice(0,str.length - 1) + str.charAt(str.length - 1).toUpperCase();
+-
+  var _reducer = (type) => (acc, curr) => {
+    acc.push(curr[type])
+    return acc
+  }
+
+- var replaceUrlSpace = str => str.replace(/ /g,'%20');

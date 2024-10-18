@@ -1,0 +1,481 @@
+@import './variables'
+
+triangle-top-left($color, $bg=$bg-color-base)
+  padding-top: 17%
+  background $bg
+  overflow hidden
+  position: relative;
+  &:before
+    display: block;
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 40vh;
+    transform: rotate(-8.5deg);
+    left: 0;
+    bottom: -40vh;
+    background: $color;
+    transform-origin: bottom left;
+
+triangle-top-right($color, $bg=$bg-color-base)
+  padding-top: 17%
+  background $bg
+  overflow hidden
+  position: relative;
+  &:before
+    display: block;
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 40vh;
+    transform: rotate(8.5deg);
+    right: 0;
+    bottom: -40vh;
+    background: $color;
+    transform-origin: bottom right;
+
+
+fw($width)
+  flex-basis $width
+  max-width $width
+
+ps()
+  position absolute
+  display block
+  content ''
+
+ps-100()
+  position absolute
+  display block
+  content ''
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+abs(w=100%, h=100%, l=0, t=0, b=initial)
+  position: absolute;
+  left: l
+  top: t
+  bottom b
+  width: w
+  height: h
+
+abs-r( w=100%, h=100%, r=0, t=0, b=initial)
+  position: absolute;
+  right: r
+  top: t
+  bottom b
+  width: w
+  height: h
+
+h()
+  position absolute
+  right 0
+  left 0
+  display block
+  margin 0 auto
+  content ''
+
+hb()
+  position absolute
+  right 0
+  left 0
+  margin 0 auto
+
+v()
+  position absolute
+  top 0
+  bottom 0
+  display block
+  margin auto 0
+  content ''
+
+vb()
+  position absolute
+  top 0
+  bottom 0
+  margin auto 0
+
+hv()
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  display block
+  margin auto
+  content ''
+
+hvb()
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  display block
+  margin auto
+
+tr($all = .2s)
+  transition all $all ease-out
+
+trc($color = .2s)
+  transition color $color ease-out
+
+tro($opacity = .2s)
+  transition opacity $opacity ease-out
+
+// ----------
+trf($fill = .2s)
+  transition fill $fill ease-out
+
+trw($width = .2s)
+  transition width $width ease-out
+
+// ----------
+trt($transform = .2s)
+  transition transform $transform ease-out
+
+trto($transform = .2s, $opacity = .2s)
+  transition transform $transform ease-out, opacity $opacity ease-out
+
+// ----------
+trb($bc = .2s)
+  transition border-color $bc ease-out
+
+trbc($bdc = .2s, $color_ = .2s)
+  transition border-color $bdc ease-out, color $color_ ease-out
+
+trbo($bdc = .2s, $opacity = .2s)
+  transition border-color $bdc ease-out, opacity $opacity ease-out
+
+// ----------
+trbg($bgc = .2s)
+  transition background-color $bgc ease-out
+
+trbgo($bgc = .2s, $opacity = .2s)
+  transition background-color $bgc ease-out, opacity $opacity ease-out
+
+trbgc($bgc = .2s, $color_ = .2s)
+  transition background-color $bgc ease-out, color $color_ ease-out
+
+trbgco($bgc = .2s, $color_ = .2s, $opacity = .2s)
+  transition background-color $bgc ease-out, color $color_ ease-out, opacity $opacity ease-out
+
+trbgb($bgc = .2s, $bdc = .2s)
+  transition background-color $bgc ease-out, border-color $bdc ease-out
+
+trbgbc($bgc = .2s, $bdc = .2s, $c = .2s)
+  transition background-color $bgc ease-out, border-color $bdc ease-out, color $c ease-out
+
+vam()
+  display inline-block
+  vertical-align middle
+
+vat()
+  display inline-block
+  vertical-align top
+
+vabs()
+  display inline-block
+  vertical-align baseline
+
+vab()
+  display inline-block
+  vertical-align bottom
+
+dt()
+  display table
+  width 100%
+  table-layout fixed
+
+dtct()
+  display table-cell
+  vertical-align top
+
+dtcm()
+  display table-cell
+  vertical-align middle
+
+dtcb()
+  display table-cell
+  vertical-align bottom
+
+cf()
+  &:after
+    display block
+    visibility hidden
+    clear both
+    height 0
+    content ''
+
+vam-ps()
+  font-size 0
+
+  &:after
+    display inline-block
+    width 0
+    height 100%
+    content ''
+    vertical-align middle
+
+o($bgc = $white, $opacity = .7)
+  background rgba($bgc, $opacity)
+
+pso($bgc = $white, $opacity = .7)
+  &:after
+    position absolute
+    top 0
+    left 0
+    display block
+    width 100%
+    height 100%
+    background rgba($bgc, $opacity_)
+    content ''
+
+dts($left, $left-padding, $right, $right-padding)
+  &__table
+    dt()
+
+  &__left
+    dtct()
+
+    if ($left != 0)
+      width $left
+
+    if ($left-padding != 0)
+      padding $left-padding
+
+  &__right
+    dtct()
+
+    if ($right != 0)
+      width right
+
+    if ($right-padding != 0)
+      padding $right-padding
+
+select-reset()
+  appearance none
+  -moz-appearance none
+  -webkit-appearance none
+
+  &::-ms-expand
+    display none
+
+divide($width)
+  ($width / 2)
+
+arrow($direction, $width, $height, $color)
+  width $width
+  height $height
+
+  if ($direction == 'top')
+    border-right divide($width) solid transparent
+    border-bottom $height solid $color
+    border-left divide($width) solid transparent
+
+  if ($direction == 'bottom')
+    border-top $height solid $color
+    border-right divide($width) solid transparent
+    border-left divide($width) solid transparent
+
+  if ($direction == 'left')
+    border-top divide($height) solid transparent
+    border-right $width solid $color
+    border-bottom divide($height) solid transparent
+
+  if ($direction == 'right')
+    border-top divide($height) solid transparent
+    border-bottom divide($height) solid transparent
+    border-left $width solid $color
+
+triangle($width, $height, $bg, $direction)
+  width 0
+  height 0
+  border-style solid
+
+  if ($direction == 't')
+    border-width 0 ($width / 2) $height ($width / 2)
+    border-color transparent transparent $bg transparent
+
+  if ($direction == 'r')
+    border-width ($height / 2) 0 ($height / 2) $width
+    border-color transparent transparent transparent $bg
+
+  if ($direction == 'b')
+    border-width $height ($width / 2) 0 ($width / 2)
+    border-color $bg transparent transparent transparent
+
+  if ($direction == 'l')
+    border-width ($height / 2) $width ($height / 2) 0
+    border-color transparent $bg transparent transparent
+
+  if ($direction == 'tl')
+    border-width $height $width 0 0
+    border-color $bg transparent transparent transparent
+
+  if ($direction == 'tr')
+    border-width 0 $width $height 0
+    border-color transparent $bg transparent transparent
+
+  if ($direction == 'br')
+    border-width 0 0 $height $width
+    border-color transparent transparent $bg transparent
+
+  if ($direction == 'bl')
+    border-width $width 0 0 $height
+    border-color transparent transparent transparent $bg
+
+tooltip($dir = 't', $color = $black, $bg = #84a02b, $br = 5px, $tr = .6s, $offset = 10px, $ptb = 10px, $plr = 10px, $arrow-width = 15px, $arrow-height = 8px)
+  position relative
+  cursor pointer
+
+  &:before,
+  &:after
+    position absolute
+    left -9999px
+    opacity 0
+    transition opacity $tr
+
+  if ($dir == 't')
+    &:before
+      bottom 'calc(100% + %s)' % $offset
+
+  if ($dir == 'b')
+    &:before
+      top 'calc(100% + %s)' % $offset
+
+  if ($dir == 'l')
+    &:before,
+    &:after
+      right 9999px
+      left auto
+
+  &:before
+    padding $ptb $plr
+    width 100%
+    border-radius $br
+    background-color $bg
+    color $color
+    content attr(data-tooltip)
+    // white-space: nowrap;
+
+  &:after
+    $arrow-dir = $dir
+    $arrow-width-normal = $arrow-width
+    $arrow-height-normal = $arrow-height
+
+    content ''
+
+    if ($dir == 'r' || ($dir == 'l'))
+      $arrow-height-normal = $arrow-width
+      $arrow-width-normal = $arrow-height
+
+    if ($dir == 't')
+      $arrow-dir = b
+
+      bottom 'calc(100% + %s - %s + 1px)' % ($offset $arrow-height-normal)
+    else if ($dir == 'r')
+      $arrow-dir = l
+    else if ($dir == 'b')
+      $arrow-dir = t
+
+      top 'calc(100% + %s - %s + 1px)' % ($offset $arrow-height-normal)
+    else if ($dir == 'l')
+      $arrow-dir = r
+
+    triangle($arrow-width-normal, $arrow-height-normal, $bg, $arrow-dir)
+
+  &:hover
+    $arrow-dir = $dir
+    $arrow-width-normal = $arrow-width
+    $arrow-height-normal = $arrow-height
+
+    &:before,
+    &:after
+      left 50%
+      opacity 1
+      transform translateX(-50%)
+
+    if ($dir == 'r' || ($dir == 'l'))
+      &:before,
+      &:after
+        top 50%
+        transform translateY(-50%)
+
+    if ($dir == 'r')
+      &:before
+        left 'calc(100% + %s)' % $offset
+
+      &:after
+        left 'calc(100% + %s - %s + 1px)' % ($offset $arrow-height-normal)
+    else if ($dir == 'l')
+      &:before,
+      &:after
+        left auto
+
+      &:before
+        right 'calc(100% + %s)' % $offset
+
+      &:after
+        right 'calc(100% + %s - %s + 1px)' % ($offset $arrow-height-normal)
+
+customScroll()
+  scrollbar-3dlight-color transparent
+  scrollbar-arrow-color $white
+  scrollbar-base-color transparent
+  scrollbar-darkshadow-color rgba($black, .01)
+  scrollbar-face-color $white
+  scrollbar-highlight-color rgba($black, .01)
+  scrollbar-shadow-color $white
+  scrollbar-track-color rgba($black, .01)
+  &::-webkit-scrollbar
+    width 2px
+  &::-webkit-scrollbar-thumb
+    background $white
+  &::-webkit-scrollbar-track
+    background transparent
+
+atomicModifiers(range, mod, prop, devider = 1)
+  for i in range
+    &._{mod + i}
+      {prop} ceil(i / devider) * 1px
+
+crossBtn($height, $thick, $bg, $left=0, $right=auto)
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  left: $left;
+  right: $right
+  width: $height
+  height $height
+  &:before
+  &:after
+    content ''
+    display: block;
+    position: absolute;
+    left: calc(50% - $thick/2)
+    top: 0;
+    width: $thick
+    height: $height
+    background-color $bg
+  &:before
+    transform rotate(45deg)
+  &:after
+    transform rotate(-45deg)
+
+cross($height, $thick, $bg, $left=0, $right=auto)
+  &:before
+  &:after
+    v()
+    left: $left
+    right: $right
+    width: $thick
+    height: $height
+    background-color $bg
+  &:before
+    transform rotate(45deg)
+  &:after
+    transform rotate(-45deg)
