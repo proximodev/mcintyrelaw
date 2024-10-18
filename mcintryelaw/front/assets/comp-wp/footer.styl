@@ -57,6 +57,9 @@
     background-repeat: no-repeat
     background-position: center
     background-image: url('../images/icons/search.svg')
+.footer-social-title
+  font-weight 700
+  text-transform uppercase    
 .social-icon-wrapper
   display: grid;
   grid-template-columns: repeat(3, 41px);
@@ -101,3 +104,11 @@
     justify-content start
   .copyright-bar
     margin-right 20px !important
+
++media-mobile()
+ .site-info
+  *
+    font-size: 13px
+  .copyright-bar
+    margin 0 0 5px !important  
+    order -1 !important   
