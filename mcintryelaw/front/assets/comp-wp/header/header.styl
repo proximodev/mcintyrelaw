@@ -19,12 +19,13 @@
   p 
     margin-bottom 0
 .header-button-group
+  font-size: 14px;
+  font-weight: 600;
+  p
+    margin-bottom 0
   .call-us-title
     text-align: center;
-    font-size: 14px;
-    font-weight: 600;
     text-transform uppercase
-    margin-bottom 0
   .gb-button
     display inline-flex
     justify-content center
@@ -37,11 +38,10 @@
     font-size: 23px;
     font-weight: 700;
     padding 0
-  .gb-container-4165ac99  
-    font-size: 14px;
-    font-weight: 600;
-    p
-      margin-bottom 0
+    cursor pointer
+    trbg()
+    &:hover
+      background: $bg-hover;  
   .header-language  
     text-transform uppercase
     margin-left auto
@@ -56,7 +56,36 @@
     padding-left 20px !important
     flex-direction: row !important
   .site-logo
+    flex-shrink: 0
     img
       width: 223px !important
-  .header-top-inner-wrapper      
+  .header-inner-tag   
     display none
+  .header-button-group
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0 20px 2px;
+    background: $bg-color-white
+    width: 100vw;
+    opacity 0
+    pointer-events: none
+    z-index -1
+    text-align: left;
+    tro()
+    font-size: 16px;
+    .mobile-menu-open &
+      opacity 1
+      pointer-events: all
+      z-index 3
+    .gb-button
+      width 100%  
+      margin 6px 0 12px
+    .gb-container-4165ac99  
+      display block
+      margin-bottom 10px
+    .header-language 
+      margin-top 10px 
+
+
+
