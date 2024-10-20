@@ -21,6 +21,13 @@ function sanitize_svg( $file, $url ) {
 }
 add_filter( 'wp_check_filetype_and_ext', 'sanitize_svg', 10, 5 );
 
+add_action( 'init', function() {
+    register_nav_menu( 'mobile-menu', __( 'Mobile Menu' ) );
+} );
+
+add_filter( 'generate_mobile_header_theme_location', function() {
+    return 'mobile-menu';
+} );
 
 // Adjust ACF min wysiwyg field height
 add_action('admin_head', 'admin_styles');
