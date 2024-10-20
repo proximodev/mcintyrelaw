@@ -1,5 +1,6 @@
 .main-navigation
   border-top 1px solid $bg-color-red
+  padding 4px 0
   .main-nav
     >ul
       >li
@@ -9,6 +10,25 @@
           font-weight: 700;
           padding-left 0 !important
           padding-right 0 !important
+          line-height 38px !important
+          border-bottom 2px solid transparent
+          display flex
+          align-items center
+          trb()
+          &:hover
+            border-color: $text-color-red
+          &:after
+            content ''
+            display block
+            width: 8px;
+            height: 13px;
+            flex-shrink: 0;
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            background-image: url('../images/icons/angle-right.svg')
+            margin-left 4px
+
 
 +media-tablet()    
   .main-navigation 
@@ -43,7 +63,7 @@
         width: 100%;
         background: $bg-color-white
         z-index: 2;     
-        padding 0 10px 50px
+        padding 4px 10px 50px
         min-height: calc(100vh - 247px)
         z-index -1
         .mobile-menu-open &
@@ -52,5 +72,7 @@
           z-index 3
         >ul
           >li
+            margin-bottom 5px
             a
               font-size: 16px
+              border-bottom 0
