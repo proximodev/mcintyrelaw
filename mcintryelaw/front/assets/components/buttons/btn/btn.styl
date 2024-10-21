@@ -1,30 +1,43 @@
-.btn
-  min-width 160px
-  height 46px
-  padding 24px
-  display flex
+.gb-button
+.wp-block-button__link 
+.wp-element-button
+  height: 46px;
+  padding 0 12px !important
+  border-radius: 5px;
+  background: $bg-color-red
+  color $text-color-white
+  display inline-flex !important
   align-items center
   justify-content center
-  trbgbc()
-  border 1px solid transparent
-  border-radius 23px
-  &._primary
-    background #F15A22
-    border-color #F15A22
-    color #fff
-    font-size 16px
-    font-weight 600
+  font-size: 18px !important
+  font-weight 700 
+  text-transform uppercase
+  trbg()
+  &:hover 
+    background $bg-hover-red
+  &.b-white, 
+  .b-white &
+    background: $bg-color-white !important
+    color $text-color-dark !important
     &:hover 
-      color #131313
-      background #FAA61A
-      border-color #FAA61A
-  &._secondary
-    color #F15A22
-    background #fff
-    border-color #F15A22
-    font-size 16px
-    font-weight 600
-    &:hover 
-      color #131313
-      background #FAA61A
-      border-color #FAA61A   
+      background $bg-hover-blue !important
+.wp-block-button__link 
+.wp-element-button   
+  min-width 154px   
+  .is-style-button-medium &
+    min-width 192px 
+  .is-style-button-large &
+    min-width 292px   
+  .is-style-button-form &,
+  .is-style-button-from &
+    width 558px  
+    max-width 100%  
+.Default  
+  min-width 154px
+.b-medium
+  min-width 192px
+.b-large
+  min-width 292px
+.b-form
+  width 558px  
+  max-width 100%
