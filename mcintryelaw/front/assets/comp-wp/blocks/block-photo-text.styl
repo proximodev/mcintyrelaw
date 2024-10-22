@@ -1,0 +1,52 @@
+.block-photo-text 
+  padding 50px 0
+  .photo-text-inner
+    position relative
+    justify-content end
+    padding 48px 0
+  .block-image
+    width 40%
+    min-width: 450px
+    height 100%
+    position absolute
+    top 0
+    left 0
+    *
+      height 100% 
+    img 
+      width 100%
+      object-fit: cover
+  .block-content
+    width 65%
+    padding 35px 35px 45px
+    background: $bg-color-blue
+    margin-left -10%
+    position relative
+    z-index 1
+  h2
+    font-size: 40px 
+    line-height 1.11
+
++media-tablet(900px)    
+  .block-photo-text 
+    padding-bottom 0
+    .photo-text-inner
+      display block
+      padding 0
+    .block-image
+      width 700px
+      max-width: 100%
+      margin 0 auto
+      min-width 0  
+      position static
+    .block-content
+      padding 50px 26px 78px   
+      width auto
+      margin: -8% -40px 0
+
++media-mobile(600px)
+  .block-photo-text 
+    .block-content
+      margin: -8% -30px 0      
+    h2
+      font-size: 35px 
