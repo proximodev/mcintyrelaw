@@ -1,0 +1,54 @@
+.block-home-hero
+  padding: 16px 0 0 !important
+  >.gb-container 
+    padding 0 40px
+    justify-content center
+  #hero-text
+    padding 50px 0 50px 25px
+    display flex
+    flex-direction: column
+    justify-content center
+    flex-basis: 670px
+    margin-right: -75px
+  h2 
+    position relative
+    &:before
+      position absolute
+      content ''
+      display block
+      top 0
+      left -32px
+      width 7px
+      height 100%
+      background: $bg-color-red
+  #hero-image-wrapper 
+    flex-basis 433px
+    align-self: end 
+
++media-mobile(600px)
+  .block-home-hero
+    padding-top 64px !important
+    >.gb-container 
+      padding 0 20px
+      flex-direction: column
+      position relative
+    #hero-image-wrapper 
+      align-self: center;
+      margin-left: 25%;
+      width: 500px
+    #hero-text
+      padding 10px 0 10px 16px  
+      border-left: 7px solid $text-color-red
+      margin-right 0
+      flex-basis: auto
+    h2 
+      letter-spacing: -.2px
+      margin-bottom 0
+      &:before
+        content: none
+    .wp-block-buttons  
+      position absolute
+      left 0
+      right 0
+      bottom 130px  
+      justify-content center
