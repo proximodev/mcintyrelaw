@@ -1,0 +1,61 @@
+.stats-block
+  padding 70px 0
+  .stats-header-wrapper
+    margin-bottom 60px !important
+    align-items center
+  .stat-item  
+    padding-right 25px
+    &:not(:first-child)
+      padding-left 25px
+      border-left 2px solid $bg-color-blue
+  h2
+    font-size: 60px
+    margin-bottom 0
+    line-height 1.25    
+  h3
+    font-size: 40px  
+    margin-bottom 20px
+    line-height 1.36
+    span
+      font-size: 30px
+      display block
+  .stats-lawsuit
+    color: $text-color-blue !important
+    titleFontFamily()
+    font-size: 25px;
+    line-height: 1.25;
+    margin-bottom 0
+
++media-tablet()
+  .stats-block    
+    .stats-item-wrapper
+      flex-wrap: wrap
+      row-gap: 40px
+    .stat-item  
+      flex-basis: 50%
+      &:nth-child(even)
+        padding-left 25px
+        border-left 2px solid $bg-color-blue
+      &:nth-child(odd)
+        padding-left 0
+        border-left 0
+    h2
+      font-size: 50px      
+
++media-mobile(600px)
+  .stats-block    
+    padding-bottom 220px
+    position relative
+    .stats-header-wrapper
+      margin-bottom 30px !important
+    .stat-item  
+      flex-basis: 100%
+      padding-left 0 !important
+      border-left 0 !important
+      &:not(:first-child)
+        padding-top 30px
+        border-top 2px solid $bg-color-blue
+    .gb-button
+      position absolute
+      bottom 110px
+      left 30px
