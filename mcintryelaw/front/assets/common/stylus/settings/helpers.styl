@@ -11,18 +11,18 @@
     margin-left: -50vw !important;
     margin-right: -50vw !important;
 
-.gb-container.full-width > .gb-container
+.gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
   max-width: $container-max-width
   margin: 0px auto
   padding-left $container-padding-desktop
   padding-right $container-padding-desktop
 
 +media-tablet(1024px)
-  .gb-container.full-width > .gb-container
+  .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-tablet
     padding-right $container-padding-tablet
 
 +media-mobile(600px)
-  .gb-container.full-width > .gb-container
+  .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-mobile
     padding-right $container-padding-mobile
