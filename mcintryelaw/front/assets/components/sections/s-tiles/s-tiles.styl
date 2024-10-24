@@ -1,0 +1,83 @@
+.s-tiles
+  padding 90px 0 130px
+  &__top
+    margin-bottom 26px
+    display flex
+    justify-content space-between
+    align-items end
+    button, a
+      margin-bottom 12px
+  &__title
+    max-width: 766px
+    margin-right 20px
+  &__list
+    display grid
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: 22px
+    row-gap: 22px
+  &__item
+    min-height 279px  
+    position relative
+    padding 48px 28px 36px
+    cursor pointer
+    &:hover
+      .s-tiles__item-hover
+        opacity 1
+    &:before
+    &-img
+    &-hover     
+      position absolute
+      display block
+      left 0
+      top 0
+      width 100%
+      height 100%
+      object-fit: cover 
+    &:before   
+      content '';
+      background: rgba(0, 0, 0, 0.65);
+      z-index 1
+    &-info
+      height 100%
+      position relative
+      z-index 2  
+      display flex
+      flex-direction: column
+      justify-content space-between
+      svg
+        margin-left auto
+        fill none
+    &-title
+      color $text-color-white
+    &-hover  
+      opacity 0
+      background: $bg-color-red
+      tro(.3s)
+      z-index 1
+
++media-tablet()
+  .s-tiles
+    &__list
+      grid-template-columns: repeat(3, 1fr)
+
++media-mobile()
+  .s-tiles
+    padding-bottom 220px
+    position relative
+    &__btn-wrapper
+      position absolute
+      left 0
+      right 0
+      bottom 110px
+      text-align center
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+
++media-mobile(480px)
+  .s-tiles
+    &__title
+      margin-right 0
+    &__list
+      grid-template-columns: repeat(1, 1fr)
+    &__item
+      min-height 286px    
