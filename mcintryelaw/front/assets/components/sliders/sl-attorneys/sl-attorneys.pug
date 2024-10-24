@@ -1,0 +1,18 @@
+mixin sl-attorneys(o = {})
+
+  +b.SECTION.sl-attorneys
+    +e.H2.title  Our Attorneys
+    +e.P.text We believe in one on one interaction with our clients and keeping them fully informed with the legal process. As communication is critical, we spend an extensive amount of time with our clients to ensure they understand every aspect of their case.
+      
+    +e.inner    
+      +e.prev 
+        +svg({name: 'b-angle-rl'})
+      +e.list
+        each item in slAttorneys.list
+          +e.item
+            +e.IMG.img(src=item.img alt='logo image') 
+            a(href='#') 
+              +e.H5.item-title !{item.title}     
+      +e.next 
+        +svg({name: 'b-angle-rr'})
+    a.gb-button.b-medium(href='#') MEET OUR FULL TEAM

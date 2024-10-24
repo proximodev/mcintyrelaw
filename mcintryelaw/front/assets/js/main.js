@@ -2,7 +2,7 @@ import './vendor/platform-detect.min';
 import './vendor/device.min';
 
 import { Footer } from '../comp-wp/footer/footer';
-//import { SFaq } from '../components/sections/s-faq/s-faq';
+import { SLAttorneys } from '../components/sliders/sl-attorneys/sl-attorneys';
 //import { FDefault } from '../components/forms/f-default/f-default';
 //import { Modal } from '../components/modals/_modal-default/modal-default';
 
@@ -15,7 +15,7 @@ const App = () => {
     $html = $document.find('html'),
     $body = $html.find('body'),
     $footer = $body.find('.back-to-top-wrapper'),
-    //$sFaq = $body.find('.schema-faq'),
+    $slAttorneys = $body.find('.sl-attorneys'),
     //$fDefault = $body.find('[class*=form-wrapper] form'),
     $modal = $body.find('.modal-default');
 
@@ -29,8 +29,8 @@ const App = () => {
   /* eslint-enable no-alert, no-console */
 
   $footer.length && Footer.init($document);
+  $slAttorneys.length && SLAttorneys($slAttorneys);
   //$modal.length && Modal.init($document, $html);
-  //$sFaq.length && SFaq.init($document, $sFaq);
   //$fDefault.length && FDefault.init($document, $fDefault);
  
 };
