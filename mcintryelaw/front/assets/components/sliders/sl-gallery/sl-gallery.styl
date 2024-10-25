@@ -1,0 +1,47 @@
+.sl-gallery
+  padding 85px 66px 130px
+  background: $bg-color-blue
+  &__title
+    margin-bottom 20px
+  &__text
+    margin-bottom 50px 
+  &__inner
+    position relative
+    svg
+      fill none
+  &__prev
+  &__next    
+    position absolute
+    top calc(50% - 23px)
+  &__prev
+    left -66px    
+  &__next  
+    right -66px 
+  &__item
+    &-inner
+      padding-top 48.5%
+      position relative
+    img
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      object-fit: cover
+
++media-mobile()  
+  .sl-gallery   
+    padding 70px 0 100px
+    &__inner
+      padding-bottom 66px
+      margin 0 -30px
+    &__prev
+    &__next  
+      top auto  
+      bottom 0
+    &__prev
+      left calc(50% - 56px) 
+    &__next  
+      right calc(50% - 56px)    
+
+

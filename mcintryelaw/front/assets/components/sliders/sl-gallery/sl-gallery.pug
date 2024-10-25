@@ -1,0 +1,16 @@
+mixin sl-gallery(o = {})
+
+  +b.SECTION.sl-gallery
+    +e.H2.title  Gallery
+    +e.P.text With the help of trial lawyers all around the state, McIntyre Law has been able to reach out to the community and give them the means to cook a Thanksgiving dinner.
+      |  Many different nonprofits and community members have come out to this event year after year. The University of Oklahoma's Sooner Schooner along with ponies Boomer and Sooner, OU men's basketball coach Lon Kruger, RUF/NEKS, and cheerleaders, have come out to support the event. This is the only non-OU-sponsored event that the ponies come to!
+    +e.inner    
+      +e.prev 
+        +svg({name: 'b-angle-rl'})
+      +e.list
+        each item in slGallery.list
+          +e.item
+            +e.item-inner
+              +e.IMG.img(src=item.img alt='logo image')   
+      +e.next 
+        +svg({name: 'b-angle-rr'})

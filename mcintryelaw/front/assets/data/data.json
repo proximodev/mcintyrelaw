@@ -13,42 +13,6 @@
 			"view": "gallery"
 		}
 	},
-	"slAttorneys": {
-		"list": [
-			{
-				"img": "assets/images/slides/news-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/news-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/news-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/news-4.png",
-				"title": "Monica Schweighart"
-			},
-			{
-				"img": "assets/images/slides/news-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/news-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/news-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/news-4.png",
-				"title": "Monica Schweighart"
-			}
-		]
-	},
 	"sTiles": {
 		"list": [
 			{
@@ -82,6 +46,58 @@
 			{
 				"img": "assets/images/tiles/tile-5.png",
 				"title": "Bus <br> Accidents"
+			}
+		]
+	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			}
+		]
+	},
+	"slAttorneys": {
+		"list": [
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			},
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
 			}
 		]
 	}
