@@ -1,4 +1,18 @@
 {
+	"modalDefault": {
+		"yt": {
+			"className": "modal-video",
+			"yt": "W9A8fsDN1kU"
+		},
+		"video": {
+			"className": "modal-video",
+			"video": "videos/envideo1.mp4"
+		},
+		"gallery": {
+			"className": "_light modal-gallery",
+			"view": "gallery"
+		}
+	},
 	"sTiles": {
 		"list": [
 			{
@@ -35,6 +49,22 @@
 			}
 		]
 	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			}
+		]
+	},
 	"slAttorneys": {
 		"list": [
 			{
@@ -68,36 +98,6 @@
 			{
 				"img": "assets/images/slides/atty-4.png",
 				"title": "Monica Schweighart"
-			}
-		]
-	},
-	"modalDefault": {
-		"yt": {
-			"className": "modal-video",
-			"yt": "W9A8fsDN1kU"
-		},
-		"video": {
-			"className": "modal-video",
-			"video": "videos/envideo1.mp4"
-		},
-		"gallery": {
-			"className": "_light modal-gallery",
-			"view": "gallery"
-		}
-	},
-	"slGallery": {
-		"list": [
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
 			}
 		]
 	}
