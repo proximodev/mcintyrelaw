@@ -1,22 +1,23 @@
-.gb-button
-.wp-block-button__link 
-.wp-element-button
-  height: 46px;
+.gb-button,
+.wp-block-button__link,
+.wp-element-button,
+.custom-form .gform_button
+  height: 46px !important
   padding 0 16px !important
-  border-radius: 5px;
-  background-color: $bg-color-red
-  color $text-color-white
+  border-radius: 5px !important
+  background-color: $bg-color-red !important
+  color $text-color-white !important
   display inline-flex !important
-  align-items center
-  justify-content center
+  align-items center !important
+  justify-content center !important
   font-size: 18px !important
-  font-weight 700 
-  text-transform uppercase
-  white-space: nowrap
-  flex-shrink: 0
-  trbg()
+  font-weight 700 !important
+  text-transform uppercase !important
+  white-space: nowrap 
+  flex-shrink: 0 !important
+  transition: background-color .2s ease-out !important
   &:hover 
-    background-color $bg-hover-red
+    background-color $bg-hover-red !important
   &.b-white, 
   .b-white &
     background-color $bg-color-white !important
@@ -40,9 +41,10 @@
   min-width 192px
 .b-large
   min-width 292px
-.b-form
-  width 558px  
-  max-width 100%
+.b-form,
+.custom-form .gform_button  
+  width 100% !important
+  max-width 100% !important
 .gb-button
   cursor pointer
   
