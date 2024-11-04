@@ -3,6 +3,9 @@
   width 100%
   max-width 1190px
 
+._mobile
+  display none
+
 .gb-container.full-width, section.is-style-full-width, .wp-block-cover.is-style-full-width
     width: 100vw;
     position: relative;
@@ -22,7 +25,14 @@
     padding-left $container-padding-tablet
     padding-right $container-padding-tablet
 
++media-mobile()
+  ._mobile
+    display block
+  ._desktop
+    display none !important
+
 +media-mobile(600px)
   .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-mobile
     padding-right $container-padding-mobile
+

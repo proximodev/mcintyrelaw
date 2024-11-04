@@ -7,7 +7,6 @@
     align-items end
     button, a
       margin-bottom 12px
-      text-decoration: none
   &__title
     max-width: 766px
     margin-right 20px
@@ -17,7 +16,11 @@
     grid-template-columns: repeat(4, 1fr)
     column-gap: 22px
     row-gap: 22px
+    &.three-col
+      grid-template-columns: repeat(3, 1fr)
   &__item
+    display block
+    text-decoration none
     &:hover
       .s-tiles__item-hover
         opacity 1
@@ -53,6 +56,9 @@
       display flex
       flex-direction: column
       justify-content space-between
+      ._include-description &
+        flex-direction: row
+        align-items: end
       svg
         margin-left auto
         fill none
@@ -61,35 +67,41 @@
       text-decoration: underline
       text-decoration-thickness 1px
       text-underline-offset 2px
+      margin-bottom 0
     &-hover  
       opacity 0
       background: $bg-color-red
       tro(.3s)
       z-index 1
+    &-description
+      border: 1px solid #D9D9D9;
+      background: #F7F7F7;  
+      padding 20px
+      min-height: 138px
 
 +media-tablet()
   .s-tiles
     &__list
       grid-template-columns: repeat(3, 1fr)
 
++media-mobile(900px)
+  .s-tiles
+    &__list
+      grid-template-columns: repeat(2, 1fr) !important
+
 +media-mobile()
   .s-tiles
-    padding-bottom 220px
-    position relative
-    &__btn-wrapper
-      position absolute
-      left 0
-      right 0
-      bottom 110px
-      text-align center
-    &__list
-      grid-template-columns: repeat(2, 1fr)
+    padding-bottom 50px
+    +.wp-block-button._mobile  
+      margin-bottom 130px
+      text-align center      
 
-+media-mobile(480px)
++media-mobile(600px)
   .s-tiles
     &__title
       margin-right 0
     &__list
-      grid-template-columns: repeat(1, 1fr)
+      grid-template-columns: repeat(1, 1fr) !important
     &__item
-      height 286px    
+      &-inner
+        height 286px    

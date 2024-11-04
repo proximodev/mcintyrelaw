@@ -4,17 +4,16 @@
 */
 
 $contentColumns = get_field("content_columns");
-if ($contentColumns == "three-columns") {
-    $contentColumnsCSS = "three-cols";
-} else {
-    $contentColumnsCSS = "four-cols";
-}
 $includeDescription = get_field("include_description");
+
+if ($includeDescription) {
+    $includeDescriptionClass = "_include-description";
+} 
 ?>
 
 <section class="s-tiles">
     <?php if( have_rows('content_tiles') ): ?>
-        <div class="s-tiles__list <?= $contentColumnsCSS; ?>">
+        <div class="s-tiles__list <?= $contentColumns; ?> <?= $includeDescriptionClass; ?>">
             <?php while( have_rows('content_tiles') ): the_row();
                 $selectedPost = get_sub_field('page-post');
                 if( $selectedPost ):
@@ -45,16 +44,18 @@ $includeDescription = get_field("include_description");
                     ?>
 
                     <a class="s-tiles__item" href="<?php echo esc_url( get_permalink( $selectedPost->ID ) ); ?>">
-                        <?php if($contentImage): ?>
-                        <img class="s-tiles__item-img" src="<?= $contentImageURL; ?>" alt="<?= $contentImageAlt; ?>"/>
-                        <?php endif; ?>
-                        <div class="s-tiles__item-hover">
-                        </div>
-                        <div class="s-tiles__item-info">
-                          <h4 class="s-tiles__item-title"><?= $contentTitle; ?></h4>
-                          <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                             <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-wr"></use>
-                          </svg>
+                        <div class="s-tiles__item-inner">    
+                            <?php if($contentImage): ?>
+                            <img class="s-tiles__item-img" src="<?= $contentImageURL; ?>" alt="<?= $contentImageAlt; ?>"/>
+                            <?php endif; ?>
+                            <div class="s-tiles__item-hover">
+                            </div>
+                            <div class="s-tiles__item-info">
+                                <h4 class="s-tiles__item-title"><?= $contentTitle; ?></h4>
+                                <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-wr"></use>
+                                </svg>
+                            </div>
                         </div>
                         <?php if($includeDescription): ?>
                         <div class="s-tiles__item-description">
