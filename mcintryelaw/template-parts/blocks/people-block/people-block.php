@@ -4,66 +4,57 @@
 */
 
 $blockHeader = get_field( 'block_header');
+$blockDescription = get_field( 'block_description');
 
-$people_query = new WP_Query(array(
-    'post_type' => 'people',
-    'posts_per_page' => -1
-));
 ?>
-
 <section class="sl-attorneys">
     <?php if($blockHeader): ?>
-    <h2 class="sl-attorneys__title"><?= $blockHeader ?></h2>
+    <h2 class="sl-attorneys__title"><?= $blockHeader; ?></h2>
     <?php endif; ?>
 
-    <p class="sl-attorneys__text">We believe in one on one interaction with our clients and keeping them fully informed with the legal process. As communication is critical, we spend an extensive amount of time with our clients to ensure they understand every aspect of their case.</p>
+    <?php if($blockDescription): ?>
+    <p class="sl-attorneys__text"><?= $blockDescription; ?></p>
+    <?php endif; ?>
 
     <div class="sl-attorneys__inner">
         <div class="sl-attorneys__prev">
             <svg class="svg svg-b-angle-rl" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <use xlink:href="assets/images/_set.svg#b-angle-rl"></use>
+                <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-rl"></use>
             </svg>
         </div>
         <div class="sl-attorneys__list">
-
             <?php
-            if ($people_query->have_posts()) :
-                while ($people_query->have_posts()) : $people_query->the_post();
+            $featured_people = get_field('people');
+            if( $featured_people ): ?>
+                <?php foreach( $featured_people as $featured_person ):
 
-                    $post_id = get_the_ID();
-                    $personTitle = get_field('person_title', $post_id);
-                    $personShortBio = get_field('person_short_bio', $post_id);
-                    $personImage = get_post_thumbnail_id($post_id);
+                    $personLink = get_permalink( $featured_person->ID );
+                    $personName = get_the_title( $featured_person->ID );
+                    $personImage = get_post_thumbnail_id( $featured_person->ID );
 
                     if ($personImage) {
-                        $personImageSrc = get_the_post_thumbnail_url(get_the_ID(),'medium');
+                        $personImageSrc = get_the_post_thumbnail_url($featured_person->ID,'medium');
                         $personImageAlt = get_post_meta($personImage, '_wp_attachment_image_alt', true);
                     } else {
                         $personImageSrc = "https://placehold.co/300x300";
+                        $personImageAlt = $personName;
                     }
                     ?>
-
-                    <a href="<?= get_permalink(); ?>">
+                    <a href="<?= $personLink; ?>">
                         <div class="sl-attorneys__item">
                             <img class="sl-attorneys__img" src="<?= $personImageSrc; ?>" alt="<?= $personImageAlt; ?>"/>
-                            <h5 class="sl-attorneys__item-title"><?= get_the_title(); ?></h5>
+                            <h5 class="sl-attorneys__item-title"><?= $personName; ?></h5>
                         </div>
                     </a>
-
-                    <?php
-                endwhile;
-            else :
-                echo '<p>No people found.</p>';
-            endif;
-
-            // Reset post data to avoid conflicts
-            wp_reset_postdata();
-            ?>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No people found.</p>
+            <?php endif; ?>
 
         </div>
     <div class="sl-attorneys__next">
         <svg class="svg svg-b-angle-rr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use xlink:href="assets/images/_set.svg#b-angle-rr"></use>
+            <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-rr"></use>
         </svg>
     </div>
     </div><a class="gb-button b-medium" href="/about/team">MEET OUR FULL TEAM</a>

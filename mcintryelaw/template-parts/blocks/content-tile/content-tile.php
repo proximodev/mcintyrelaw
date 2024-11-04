@@ -2,87 +2,71 @@
 /**
 * Block Name: Content Tile
 */
+
+$contentColumns = get_field("content_columns");
+if ($contentColumns == "three-columns") {
+    $contentColumnsCSS = "three-cols";
+} else {
+    $contentColumnsCSS = "four-cols";
+}
+$includeDescription = get_field("include_description");
 ?>
 
 <section class="s-tiles">
-  <div class="s-tiles__top">
-    <h2 class="s-tiles__title"> Our Lawyers Represent the Injured in a Wide Range of Cases
-    </h2>
-    <div class="s-tiles__btn-wrapper"><a class="gb-button b-medium" href="#">VIEW ALL PRACTICE AREAS</a>
-    </div>
-  </div>
-  <div class="s-tiles__list"><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-7.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Car <br> Accidents
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-8.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Truck <br> Accidents
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-3.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Motorcycle <br> Accidents
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-6.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Bicycle <br> Accidents
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-2.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Dog Bites
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-1.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Slip and <br> Fall
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-4.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Swimming Pool Accidents
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a><a class="s-tiles__item" href="#"><img class="s-tiles__item-img" src="assets/images/tiles/tile-5.png" alt="tile image"/>
-    <div class="s-tiles__item-hover">
-    </div>
-    <div class="s-tiles__item-info">
-      <h4 class="s-tiles__item-title">Bus <br> Accidents
-      </h4>
-      <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <use xlink:href="assets/images/_set.svg#b-angle-wr"></use>
-      </svg>
-    </div></a>
-  </div>
+    <?php if( have_rows('content_tiles') ): ?>
+        <div class="s-tiles__list <?= $contentColumnsCSS; ?>">
+            <?php while( have_rows('content_tiles') ): the_row();
+                $selectedPost = get_sub_field('page-post');
+                if( $selectedPost ):
+
+                    $contentImage = get_sub_field("content_image");
+                    if ($contentImage) {
+                        $contentImageURL = $contentImage['sizes']['one-quarter'];
+                        $contentImageAlt = $contentImage['alt'];
+                    } else {
+                        $contentImage = get_post_thumbnail_id( $selectedPost->ID );
+                        $contentImageURL = get_the_post_thumbnail_url($selectedPost->ID,'medium');
+                        $contentImageAlt = get_post_meta($contentImage, '_wp_attachment_image_alt', true);
+                    }
+
+                    $customTitle = get_sub_field("custom_title");
+                    if ($customTitle) {
+                        $contentTitle = $customTitle;
+                    } else {
+                        $contentTitle = esc_html( get_the_title( $selectedPost->ID ) );
+                    }
+
+                    if ($includeDescription) {
+                        $contentDescription = get_sub_field("content_description");
+                        if (!$contentDescription) {
+                            $contentDescription = esc_html( get_the_excerpt( $selectedPost->ID ) );
+                        }
+                    }
+                    ?>
+
+                    <a class="s-tiles__item" href="<?php echo esc_url( get_permalink( $selectedPost->ID ) ); ?>">
+                        <?php if($contentImage): ?>
+                        <img class="s-tiles__item-img" src="<?= $contentImageURL; ?>" alt="<?= $contentImageAlt; ?>"/>
+                        <?php endif; ?>
+                        <div class="s-tiles__item-hover">
+                        </div>
+                        <div class="s-tiles__item-info">
+                          <h4 class="s-tiles__item-title"><?= $contentTitle; ?></h4>
+                          <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                             <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-wr"></use>
+                          </svg>
+                        </div>
+                        <?php if($includeDescription): ?>
+                        <div class="s-tiles__item-description">
+                            <?= $contentDescription; ?>
+                        </div>
+                        <?php endif; ?>
+                    </a>
+
+                <?php endif; ?>
+            <?php endwhile; ?>
+        </div>
+    <?php else: ?>
+        <p>No content selected.</p>
+    <?php endif; ?>
 </section>
