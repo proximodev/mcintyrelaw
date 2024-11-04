@@ -1,0 +1,32 @@
+.statute-block
+  padding 96px 0
+  position relative
+  .statute-inner-text
+    position relative
+    z-index 1
+  h2
+    max-width: 770px
+  p  
+    max-width: 685px
+    margin-bottom 30px
+  .statute-background  
+    position absolute
+    top -6%
+    left 56%
+    background-image: url(../images/bg/statute.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    width 545px
+    max-width: 44%
+    height 481px
+    max-height 100%
+
++media-mobile()
+  .statute-block
+    padding 164px 0
+    .statute-background  
+      top 45px
+      left auto
+      right -15%
+      max-width: 101%
+      background-position: top
