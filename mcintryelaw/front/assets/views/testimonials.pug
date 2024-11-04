@@ -1,0 +1,14 @@
+extends ../common/pug/layout.pug
+
+block variables
+  -
+    var PAGEINFO = {
+      title: 'McIntyreLaw',
+      description: 'McIntyreLaw Testimonials page'
+    }
+
+block content
+  body.p-home
+    +s-testimonials()
+    +scripts({scripts: 
+      ['assets/js/vendor/jquery.min.js', 'assets/js/vendor/slick.min.js']})

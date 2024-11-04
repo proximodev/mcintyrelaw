@@ -15,4 +15,8 @@
     <path d="M19.025 13.511l8.41 9.345a1 1 0 0 1 0 1.337l-8.41 9.345" stroke="#fff" stroke-width="3" stroke-linecap="square"/>
     <rect x="1" y="1.494" width="44.061" height="44.061" rx="4" stroke="#fff" stroke-width="2"/>
 </symbol>
+<symbol id="play" viewBox="0 0 58 58">
+    <circle cx="29" cy="29" r="29" fill="#A21D21" fill-opacity=".75"/>
+    <path d="M23 37.252V19.838a1 1 0 0 1 1.543-.84L38.64 28.12a1 1 0 0 1-.036 1.701l-14.097 8.293A1 1 0 0 1 23 37.252z" fill="#fff"/>
+</symbol>
 </svg>

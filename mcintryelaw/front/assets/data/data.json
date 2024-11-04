@@ -1,4 +1,18 @@
 {
+	"modalDefault": {
+		"yt": {
+			"className": "modal-video",
+			"yt": "W9A8fsDN1kU"
+		},
+		"video": {
+			"className": "modal-video",
+			"video": "videos/envideo1.mp4"
+		},
+		"gallery": {
+			"className": "_light modal-gallery",
+			"view": "gallery"
+		}
+	},
 	"sTiles": {
 		"list": [
 			{
@@ -34,20 +48,6 @@
 				"title": "Bus <br> Accidents"
 			}
 		]
-	},
-	"modalDefault": {
-		"yt": {
-			"className": "modal-video",
-			"yt": "W9A8fsDN1kU"
-		},
-		"video": {
-			"className": "modal-video",
-			"video": "videos/envideo1.mp4"
-		},
-		"gallery": {
-			"className": "_light modal-gallery",
-			"view": "gallery"
-		}
 	},
 	"slAttorneys": {
 		"list": [
@@ -98,6 +98,28 @@
 			},
 			{
 				"img": "assets/images/slides/gallery-2.png"
+			}
+		]
+	},
+	"slTestimonials": {
+		"list": [
+			{
+				"img": "assets/images/slides/testimonial-1.png"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png"
+			},
+			{
+				"img": "assets/images/slides/testimonial-1.png"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png"
 			}
 		]
 	}

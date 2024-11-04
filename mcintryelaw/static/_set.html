@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Symbols</title>
+  <title>4 Symbols</title>
   <meta name="viewport" content="width=device-width" />
   <style>
     html {
@@ -392,6 +392,11 @@
       height: 47px;
     }
     
+    .gss-showOriginal .gss-iconbox #gss-icon-play {
+      width: 58px;
+      height: 58px;
+    }
+    
     
   </style>
   <style class="gss-filter-css"></style>
@@ -424,6 +429,12 @@
     <rect x="1" y="1.494" width="44.061" height="44.061" rx="4" stroke="#fff" stroke-width="2"/>
 
   </symbol>
+  <symbol id="play" viewBox="0 0 58 58">
+    
+    <circle cx="29" cy="29" r="29" fill="#A21D21" fill-opacity=".75"/>
+    <path d="M23 37.252V19.838a1 1 0 0 1 1.543-.84L38.64 28.12a1 1 0 0 1-.036 1.701l-14.097 8.293A1 1 0 0 1 23 37.252z" fill="#fff"/>
+
+  </symbol>
   <symbol id="gss-icon-list" viewBox="0 0 5 5">
     <rect width="2" height="2" x="0" y="0"></rect>
     <rect width="2" height="2" x="3" y="0"></rect>
@@ -432,13 +443,13 @@
   </symbol>
 </svg>
 <header class="gss-toolbar">
-  <h1>3 Symbols</h1>
+  <h1>4 Symbols</h1>
   <button class="gss-toolbar-list">
     <svg aria-label="Compact" width="15" height="15"><use xlink:href="#gss-icon-list"></use>
     </svg> List
   </button>
   <input class="gss-toolbar-filter" type="search"
-         placeholder="Filter 3 symbols…"
+         placeholder="Filter 4 symbols…"
          aria-label="Filter by id" title="Filter by id">
   <button class="gss-toolbar-orig" data-toggle-class="gss-showOriginal">Original Size</button>
   <button class="gss-toolbar-outl" data-toggle-class="gss-showColor">Test Color</button>
@@ -540,6 +551,40 @@
 .svg-b-angle-wr
   width 47px
   height 47px
+</code>
+      </div>
+    </div>
+    <div class="gss-iconbox-action">
+      <button data-action="copy">Copy</button>
+      <button data-action="info">Show</button>
+    </div>
+  </div>
+  <div class="gss-iconbox gss-searchable"
+       id="gss-iconbox-play"
+       data-search="play play 58x58 <1 <2 <3 <4 <5 <6 <7 <8 <9">
+    <div class="gss-iconbox-header">
+      <h2>play</h2>
+      <span>0.3&thinsp;kB</span>
+    </div>
+    <p class="gss-iconbox-head2">
+      <span>play.svg</span>
+      <span>58&thinsp;×&thinsp;58</span>
+      <span>260&thinsp;B</span>
+    </p>
+    <div class="gss-iconbox-wrapper">
+      <div class="gss-iconbox-icon" data-dimensions="58&thinsp;×&thinsp;58">
+        <svg role="img" id="gss-icon-play">
+          <use xlink:href="#play"></use>
+        </svg>
+      </div>
+      <div class="gss-iconbox-code">
+        <code>+svg({
+   name: &quot;play&quot;
+})
+
+.svg-play
+  width 58px
+  height 58px
 </code>
       </div>
     </div>

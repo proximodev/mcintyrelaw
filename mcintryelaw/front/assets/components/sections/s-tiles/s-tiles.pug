@@ -9,8 +9,10 @@ mixin s-tiles(o = {})
     +e.list
       each item in sTiles.list
         +e.A.item(href='#')
-          +e.IMG.item-img(src=item.img alt='tile image')
-          +e.DIV.item-hover
-          +e.DIV.item-info
-            +e.H4.item-title !{item.title}
-            +svg({name: 'b-angle-wr'})
+          +e.DIV.item-inner
+            +e.IMG.item-img(src=item.img alt='tile image')
+            +e.DIV.item-hover
+            +e.DIV.item-info
+              +e.H4.item-title !{item.title}
+              +svg({name: 'b-angle-wr'})
+          +e.DIV.item-description Injuries or fatalities suffered while riding motorcycles.                        
