@@ -3,7 +3,7 @@ mixin sl-testimonials(o = {})
   +b.DIV.sl-testimonials
     +e.list
       each item in slTestimonials.list
-        +e.item
+        +e.item(data-open-modal='modal-default' onclick='handler("'+item.yt+'")')
           +e.IMG.img(src=item.img alt='customer image') 
           +svg({name: 'play'}) 
     +e.arrows    

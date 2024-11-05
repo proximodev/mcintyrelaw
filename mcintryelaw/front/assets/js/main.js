@@ -6,7 +6,7 @@ import { SLAttorneys } from '../components/sliders/sl-attorneys/sl-attorneys';
 import { SLGallery } from '../components/sliders/sl-gallery/sl-gallery';
 import { SLTestimonials } from '../components/sliders/sl-testimonials/sl-testimonials';
 import { FDefault } from '../components/forms/f-default/f-default';
-//import { Modal } from '../components/modals/_modal-default/modal-default';
+import { Modal } from '../components/modals/_modal-default/modal-default';
 
 const $ = window.$ = window.jQuery;
 
@@ -36,7 +36,7 @@ const App = () => {
   $slAttorneys.length && SLAttorneys($slAttorneys);
   $slGallery.length && SLGallery($slGallery);
   $slTestimonials.length && SLTestimonials($slTestimonials);
-  //$modal.length && Modal.init($document, $html);
+  $modal.length && Modal.init($document, $html);
   $fDefault.length && FDefault.init($document, $fDefault);
  
 };

@@ -11,6 +11,7 @@ const SLTestimonials = ($slTestimonials) => {
         breakpoint: 600,
         settings: {
           vertical: true,
+          verticalSwiping: true,
         }
       },
     ]

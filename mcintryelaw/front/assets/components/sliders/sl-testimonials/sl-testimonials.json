@@ -1,26 +1,32 @@
 {
   "list": [
     {
-      "img": "assets/images/slides/testimonial-1.png"
+      "img": "assets/images/slides/testimonial-1.png",
+      "yt": "7wtfhZwyrcc"
     },
     {
       
-      "img": "assets/images/slides/testimonial-2.png"
+      "img": "assets/images/slides/testimonial-2.png",
+      "yt": "0I647GU3Jsc"
     },
     {
       
-      "img": "assets/images/slides/testimonial-3.png"
+      "img": "assets/images/slides/testimonial-3.png",
+      "yt": "7wtfhZwyrcc"
     },
     {
-      "img": "assets/images/slides/testimonial-1.png"
+      "img": "assets/images/slides/testimonial-1.png",
+      "yt": "0I647GU3Jsc"
     },
     {
       
-      "img": "assets/images/slides/testimonial-2.png"
+      "img": "assets/images/slides/testimonial-2.png",
+      "yt": "7wtfhZwyrcc"
     },
     {
       
-      "img": "assets/images/slides/testimonial-3.png"
+      "img": "assets/images/slides/testimonial-3.png",
+      "yt": "0I647GU3Jsc"
     }
   ]
 }
