@@ -1,0 +1,49 @@
+.CTA-banner-block
+  padding 22px 0
+.CTA-banner-inner
+  position relative
+  justify-content space-between
+.CTA-banner-inner-text  
+  width 60%
+  h1, h2, p
+    padding-left 25px
+  h1, h2  
+    border-left 4px solid $bg-color-red
+  p
+    margin-bottom 34px
+  .gb-button
+    margin-left 25px  
+    font-size: 23px !important
+    &:before
+      content: ''
+      background-image: url(../images/icons/phone.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      width 22px
+      height 22px
+      margin-right 5px
+.CTA-banner-background
+  background-image: url(../images/bg/statute.svg)
+  background-repeat: no-repeat
+  background-size: contain !important
+  width 292px
+  max-width: 40%
+  height 258px
+  max-height 100%
+
++media-mobile(600px)  
+  .CTA-banner-block
+    padding: 102px 0 94px
+  .CTA-banner-inner-text  
+    width 100%
+    h1, h2, p
+      padding-left 16px
+    h1, h2
+      margin-bottom 32px
+      border-left-width: 7px
+    p
+      margin-bottom 70px
+    .gb-button
+      margin-left 0
+  .CTA-banner-background
+    display none  
