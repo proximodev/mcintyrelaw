@@ -13,42 +13,6 @@
 			"view": "gallery"
 		}
 	},
-	"slAttorneys": {
-		"list": [
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			},
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			}
-		]
-	},
 	"sTiles": {
 		"list": [
 			{
@@ -82,6 +46,42 @@
 			{
 				"img": "assets/images/tiles/tile-5.png",
 				"title": "Bus <br> Accidents"
+			}
+		]
+	},
+	"slAttorneys": {
+		"list": [
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			},
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
 			}
 		]
 	},
