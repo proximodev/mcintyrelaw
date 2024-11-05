@@ -1,24 +1,22 @@
 mixin s-testimonials(o = {})
 
   +b.SECTION.s-testimonials
-    .container
-      +e.top
-        +e.info
-          +e.H2.title  We’re On Your Side From Start to Finish
-          +e.P.text  Our past clients understand just how hard we fight on behalf of those we represent. That’s because we know just how high the stakes are and refuse to give up until our clients have been treated fairly.
-        +e.list
-          +e.H5.item
-            +e.item-inner Over 
-              span._blue 90 years 
-              | of combined experience
-          +e.H5.item 
-            +e.item-inner
-              p
-                span._blue 4.8 
-                span._orange ★★★★★
-              span Google Reviews
-          +e.H5.item 
-            +e.item-inner We work on a contingency fee basis. 
-              span._blue No fee unless we win.
+    +e.top
+      +e.info
+        +e.H2.title  We’re On Your Side From Start to Finish
+        +e.P.text  Our past clients understand just how hard we fight on behalf of those we represent. That’s because we know just how high the stakes are and refuse to give up until our clients have been treated fairly.
+      +e.list
+        +e.H5.item
+          +e.P.item-inner Over 
+            span._blue 90 years 
+            | of combined experience
+        +e.H5.item 
+          +e.P.item-inner
+            span._blue 4.8 
+            span._orange ★★★★★ 
+            | Google Reviews
+        +e.H5.item 
+          +e.P.item-inner We work on a contingency fee basis. 
+            span._blue No fee unless we win.
 
-      +sl-testimonials()
+    +sl-testimonials()

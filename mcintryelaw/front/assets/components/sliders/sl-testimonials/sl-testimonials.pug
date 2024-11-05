@@ -3,11 +3,11 @@ mixin sl-testimonials(o = {})
   +b.DIV.sl-testimonials
     +e.list
       each item in slTestimonials.list
-        +e.A.item(href='#')
+        +e.item
           +e.IMG.img(src=item.img alt='customer image') 
           +svg({name: 'play'}) 
     +e.arrows    
       +e.prev 
-        +svg({name: 'b-angle-rl'})
+        +svg({name: 'b-angle-wl'})
       +e.next 
-        +svg({name: 'b-angle-rr'})
+        +svg({name: 'b-angle-wr'})

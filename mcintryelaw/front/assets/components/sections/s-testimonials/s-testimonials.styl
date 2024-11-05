@@ -22,3 +22,26 @@
     align-items center
     &:not(:first-child)
       border-left: 2px solid $bg-color-blue
+
++media-tablet()
+  .s-testimonials
+    &__top
+      display block
+    &__item
+      &:first-child
+        padding-left 0
+
++media-mobile(600px)
+  .s-testimonials  
+    padding 80px 0
+    &__list
+      display block
+    &__item     
+      padding 40px 0
+      max-width: 100%
+      &:first-child
+        padding-top 20px
+      &:not(:first-child)
+        border-left 0
+        border-top: 2px solid $bg-color-blue
+   
