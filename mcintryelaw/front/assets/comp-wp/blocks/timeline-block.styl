@@ -1,10 +1,75 @@
 .timeline-block
   padding 0 0 90px
-  &.day-of-kindness
+  &.practice-area
     padding-top 50px
-.timeline-vertical-line
-  padding-top 32px
+  h3, h5
+    margin-bottom 5px  
+    color $text-color-red
+  ._bold 
+    font-weight 700      
 #timeline-text-wrapper
-  width 55%  
-.timeline-icon-wrapper  
-  width 45%
+  width 544px
+  margin-right 20px
+  flex-grow: 1
+  max-width 572px
+  .practice-area & 
+    max-width: 608px
+  figure
+    margin-bottom 40px
+  .wp-block-buttons
+    margin-top 30px
+.timeline-icon-wrapper 
+  width 500px
+  .practice-area & 
+    width 440px
+  >.gb-container
+    margin-bottom 40px
+  p  
+    margin-bottom 0 
+  figure
+    margin-bottom 10px    
+    img
+      height 63px
+      width 86px
+      object-fit: contain
+      object-position: left   
+.timeline-vertical-line  
+  flex-shrink: 0
+  margin 0 1px 0 auto 
+  width 3px
+  background-image: url(../images/bg/line-v2.svg)
+  background-repeat: no-repeat
+  background-size: contain
+  background-size: 100%
+  .practice-area &
+    background-image: url(../images/bg/line-v1.svg)  
+.timeline-horizontal-line   
+  flex-shrink: 0
+  background-image: url(../images/bg/line-h2.svg)
+  background-repeat: no-repeat
+  background-size: contain 
+  background-size: 100%
+  width 220px
+  height: 3px
+  margin 15px 12px 0 0
+  .practice-area &
+    width 82px
+    background-image: url(../images/bg/line-h1.svg)  
+    margin-top 32px
+
++media-tablet()
+  .timeline-horizontal-line
+    background-image: url(../images/bg/line-h1.svg)
+    width 72px !important
+
++media-mobile()
+  .timeline-block
+    flex-wrap: wrap
+  #timeline-text-wrapper
+    width 100%  
+    max-width: 100%
+    margin-bottom 40px
+  .timeline-vertical-line
+    margin-left 0  
+  .timeline-icon-wrapper 
+    width calc(100% - 5px) !important
