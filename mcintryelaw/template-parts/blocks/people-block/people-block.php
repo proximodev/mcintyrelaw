@@ -5,7 +5,8 @@
 
 $blockHeader = get_field( 'block_header');
 $blockDescription = get_field( 'block_description');
-
+$buttonLabel = get_field( 'button_label');
+$buttonURL = get_field( 'button_url');
 ?>
 <section class="sl-attorneys">
     <?php if($blockHeader): ?>
@@ -57,6 +58,7 @@ $blockDescription = get_field( 'block_description');
             <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-rr"></use>
         </svg>
     </div>
-    </div><a class="gb-button b-medium" href="/about/team">MEET OUR FULL TEAM</a>
+    </div>
+    <a class="gb-button b-medium" href="<?= $buttonURL; ?>"><?= $buttonLabel; ?></a>
 </section>
 
