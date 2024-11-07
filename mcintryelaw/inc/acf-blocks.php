@@ -17,7 +17,7 @@ function my_acf_init() {
             'category'          => 'media',
             'icon'              => 'format-image',
             'keywords'          => array( 'media', 'video', 'youtube' ),
-            'post_types'        => array('post', 'page'),
+            'post_types'        => array('post', 'page', 'practice-area'),
             'mode'              => 'edit',
             //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
         ));
@@ -30,7 +30,7 @@ function my_acf_init() {
             'category'          => 'content',
             'icon'              => 'groups',
             'keywords'          => array( 'people', 'team', 'lawyer', 'bio'),
-            'post_types'        => array('post', 'page'),
+            'post_types'        => array('post', 'page', 'practice-area'),
             'mode'              => 'edit',
         ));
 
@@ -42,7 +42,7 @@ function my_acf_init() {
             'category'          => 'media',
             'icon'              => 'images-alt',
             'keywords'          => array( 'people', 'team', 'lawyer', 'bio'),
-            'post_types'        => array('post', 'page'),
+            'post_types'        => array('post', 'page', 'practice-area'),
             'mode'              => 'edit',
         ));
 
@@ -54,7 +54,7 @@ function my_acf_init() {
             'category'          => 'content',
             'icon'              => 'format-image',
             'keywords'          => array( 'tiles', 'content'),
-            'post_types'        => array('post', 'page'),
+            'post_types'        => array('post', 'page', 'practice-area'),
             'mode'              => 'edit',
         ));
 
