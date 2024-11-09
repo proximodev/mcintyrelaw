@@ -59,8 +59,8 @@ function my_acf_init() {
         ));
 
         acf_register_block(array(
-            'name'              => 'testimonial-block',
-            'title'             => __('Testimonial Block'),
+            'name'              => 'testimonial-slider',
+            'title'             => __('Testimonial Video Slider'),
             'description'       => __('Slider with testimonial videos'),
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'video',
@@ -87,8 +87,8 @@ function my_acf_init() {
 
 function my_acf_block_render_callback( $block ) {
     $slug = str_replace('acf/', '', $block['name']);
-    if( file_exists( get_theme_file_path("/template-parts/blocks/{$slug}/{$slug}.php") ) ) {
-        include( get_theme_file_path("/template-parts/blocks/{$slug}/{$slug}.php") );
+    if( file_exists( get_theme_file_path("/blocks/{$slug}/{$slug}.php") ) ) {
+        include( get_theme_file_path("/blocks/{$slug}/{$slug}.php") );
     }
 }
 ?>
