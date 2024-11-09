@@ -2,11 +2,12 @@
 /**
 * Block Name: Testimonial Slider
 */
+include( get_theme_file_path("/inc/functions/get-youtube-id.php") );
+include( get_theme_file_path("/inc/functions/get-image-properties.php") );
 
 $testimonialHeader = get_field( 'testimonial_header');
 $testimonialDescription = get_field( 'testimonial_description');
 $googleReviewScore = get_field( 'google_review_score');
-
 ?>
 
 <section class="s-testimonials">
@@ -32,40 +33,31 @@ $googleReviewScore = get_field( 'google_review_score');
 
   <?php if( have_rows('testimonials') ): ?>
   <div class="sl-testimonials">
-
     <div class="sl-testimonials__list">
-
       <?php while( have_rows('testimonials') ): the_row();
         $videoPosterImage = get_sub_field('video_poster_image');
         $youTubeURL = get_sub_field('youtube_url');
 
-        // Get the Youtube ID from URL
-        if ($youTubeEmbed) {
-            preg_match('/src="(.+?)"/', $youTubeEmbed, $matches_url );
-            $src = $matches_url[1];
-            preg_match('/embed(.*?)?feature/', $src, $matches_id );
-            $youtubeID = $matches_id[1];
-            $youtubeID = str_replace( str_split( '?/' ), '', $youtubeID );
-            //echo 'youtubeID:' . $youtubeID;
-        } else {
-            $youtubeID = "";
-        }
+        $youTubeID = get_youtube_id_from_url($youTubeURL);
+        $videoPosterImageAttributes = get_image_properties($videoPosterImage, 'full-width');
 
+        $videoPosterImageSrc = $videoPosterImageAttributes['src'];
+        $videoPosterImageAlt = $videoPosterImageAttributes['alt'];
+        $videoPosterImageTitle = $videoPosterImageAttributes['title'];
       ?>
 
-      <?php if ($youtubeID): ?>
-      <div class="sl-testimonials__item" data-open-modal="modal-default" onclick="handler(&quot;7wtfhZwyrcc&quot;)">
-        <img class="sl-testimonials__img" src="assets/images/slides/testimonial-1.png" alt="customer image"/>
+      <?php if ($youTubeID): ?>
+      <div class="sl-testimonials__item" data-open-modal="modal-default" onclick="handler(&quot;<?= $youTubeID; ?>&quot;)">
+        <img class="sl-testimonials__img" src="<?= $videoPosterImageSrc; ?>" title="<?= $videoPosterImageTitle; ?>" alt="<?= $videoPosterImageAlt; ?>"/>
         <svg class="svg svg-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <use xlink:href="assets/images/_set.svg#play"></use>
+          <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#play"></use>
         </svg>
       </div>
       <?php else: ?>
-      <p>YouTube URL not found</p>
+      <p>Error: YouTube URL not found</p>
       <?php endif; ?>
 
       <?php endwhile; ?>
-
     </div>
 
     <div class="sl-testimonials__arrows">
@@ -82,5 +74,4 @@ $googleReviewScore = get_field( 'google_review_score');
     </div>
   </div>
   <?php endif; ?>
-
 </section>
