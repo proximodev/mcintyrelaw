@@ -58,6 +58,30 @@ function my_acf_init() {
             'mode'              => 'edit',
         ));
 
+        acf_register_block(array(
+            'name'              => 'testimonial-block',
+            'title'             => __('Testimonial Block'),
+            'description'       => __('Slider with testimonial videos'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'video',
+            'icon'              => 'format-image',
+            'keywords'          => array( 'video', 'testimonial'),
+            'post_types'        => array('post', 'page', 'practice-area'),
+            'mode'              => 'edit',
+        ));
+
+        acf_register_block(array(
+            'name'              => 'gallery-slider',
+            'title'             => __('Gallery Slider'),
+            'description'       => __('Image slider component'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'media',
+            'icon'              => 'format-image',
+            'keywords'          => array( 'photo', 'gallery', 'images', 'slider'),
+            'post_types'        => array('post', 'page', 'practice-area'),
+            'mode'              => 'edit',
+        ));
+
     }
 }
 
