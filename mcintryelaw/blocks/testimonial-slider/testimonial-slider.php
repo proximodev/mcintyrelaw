@@ -21,7 +21,7 @@ $googleReviewScore = get_field( 'google_review_score');
         <p class="s-testimonials__item-inner">Over <span class="_blue">90 years</span> of combined experience</p>
       </h5>
       <h5 class="s-testimonials__item">
-        <p class="s-testimonials__item-inner"><span class="_blue"><?= $googleReviewScore; ?> </span>
+        <p class="s-testimonials__item-inner"><span class="_blue"><?= esc_html($googleReviewScore ?: '5.0'); ?></span>
           <span class="_orange">★★★★★</span> Google Reviews
         </p>
       </h5>
@@ -41,21 +41,20 @@ $googleReviewScore = get_field( 'google_review_score');
         $youTubeID = get_youtube_id_from_url($youTubeURL);
         $videoPosterImageAttributes = get_image_properties($videoPosterImage, 'full-width');
 
-        $videoPosterImageSrc = $videoPosterImageAttributes['src'];
-        $videoPosterImageAlt = $videoPosterImageAttributes['alt'];
-        $videoPosterImageTitle = $videoPosterImageAttributes['title'];
-      ?>
-
-      <?php if ($youTubeID): ?>
-      <div class="sl-testimonials__item" data-open-modal="modal-default" onclick="handler(&quot;<?= $youTubeID; ?>&quot;)">
-        <img class="sl-testimonials__img" src="<?= $videoPosterImageSrc; ?>" title="<?= $videoPosterImageTitle; ?>" alt="<?= $videoPosterImageAlt; ?>"/>
-        <svg class="svg svg-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#play"></use>
-        </svg>
-      </div>
-      <?php else: ?>
-      <p>Error: YouTube URL not found</p>
-      <?php endif; ?>
+        $videoPosterImageSrc = isset($videoPosterImageAttributes['src']) ? esc_url($videoPosterImageAttributes['src']) : '';
+        $videoPosterImageAlt = isset($videoPosterImageAttributes['alt']) ? esc_attr($videoPosterImageAttributes['alt']) : '';
+        $videoPosterImageTitle = isset($videoPosterImageAttributes['title']) ? esc_attr($videoPosterImageAttributes['title']) : '';
+        ?>
+        <?php if ($youTubeID): ?>
+        <div class="sl-testimonials__item" data-open-modal="modal-default" onclick="handler(&quot;<?= $youTubeID; ?>&quot;)">
+          <img class="sl-testimonials__img" src="<?= $videoPosterImageSrc; ?>" title="<?= $videoPosterImageTitle; ?>" alt="<?= $videoPosterImageAlt; ?>"/>
+          <svg class="svg svg-play" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#play"></use>
+          </svg>
+        </div>
+        <?php else: ?>
+        <p>Error: YouTube URL not found</p>
+        <?php endif; ?>
 
       <?php endwhile; ?>
     </div>
