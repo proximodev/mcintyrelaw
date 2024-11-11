@@ -4,6 +4,8 @@
 */
 ?>
 
+<?= get_stylesheet_directory_uri() ?>
+
 <section class="sl-gallery">
   <div class="sl-gallery__wrapper">
     <h2 class="sl-gallery__title"> Gallery
