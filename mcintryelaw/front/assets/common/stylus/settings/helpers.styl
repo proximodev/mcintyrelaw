@@ -6,7 +6,19 @@
 ._mobile
   display none
 
-.gb-container.full-width, section.is-style-full-width, .wp-block-group.is-style-full-width, .wp-block-cover.is-style-full-width
+
+.breadcrumb-wrapper 
+  span
+    font-weight 700
+    a
+      text-decoration underline
+    &.breadcrumb_last
+      font-weight 400  
+
+.grid-container.container
+  max-width: $container-max-width    
+
+.gb-container.full-width, section.is-style-full-width, .wp-block-cover.is-style-full-width
     width: 100vw;
     position: relative;
     left: 50%;
@@ -20,10 +32,14 @@
   padding-left $container-padding-desktop
   padding-right $container-padding-desktop
 
-+media-tablet(1024px)
++media-tablet()
   .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-tablet
     padding-right $container-padding-tablet
+
++media-mobile(768px)
+  .one-container .site-content
+    padding-top: 0 !important;
 
 +media-mobile()
   ._mobile
