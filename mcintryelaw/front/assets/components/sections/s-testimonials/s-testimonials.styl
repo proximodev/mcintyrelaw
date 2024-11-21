@@ -10,6 +10,9 @@
     display flex
     align-items start
     justify-content space-between
+  &__title
+    color $text-color-blue  
+    margin-bottom 15px
   &__info 
     max-width 478px  
   &__list
@@ -22,6 +25,10 @@
     align-items center
     &:not(:first-child)
       border-left: 2px solid $bg-color-blue
+    *  
+      titleFontFamily()
+      font-size: 25px
+      line-height 1.11
 
 +media-tablet()
   .s-testimonials

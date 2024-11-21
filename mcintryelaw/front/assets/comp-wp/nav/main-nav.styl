@@ -1,5 +1,12 @@
 .main-navigation
   border-top 1px solid $bg-color-red
+  .inside-navigation.grid-container
+    max-width: 1220px
+    justify-content space-between
+    padding 0 20px !important
+    position relative
+  .search-wrapper
+    margin-left auto  
   .main-nav
     >ul
       >li
@@ -32,6 +39,10 @@
 +media-tablet()    
   .main-navigation 
     border-top 0
+    .search-wrapper
+      margin-left 0 
+    .search-toggle
+      margin-right -18px  
     .inside-navigation
       height 90px
       justify-content end !important  

@@ -2,6 +2,8 @@ const Modal = (() => {
     let thisModal;
 
     const closeModal = (thisModal, $html) => {
+        if(!thisModal?.length) return;
+        
         const _reset = () => {
             thisModal.removeClass('_open');
             $html.removeClass('_open-modal');

@@ -17,17 +17,17 @@ $googleReviewScore = get_field( 'google_review_score');
       <p class="s-testimonials__text"><?= $testimonialDescription; ?></p>
     </div>
     <div class="s-testimonials__list">
-      <h5 class="s-testimonials__item">
+      <div class="s-testimonials__item">
         <p class="s-testimonials__item-inner">Over <span class="_blue">90 years</span> of combined experience</p>
-      </h5>
-      <h5 class="s-testimonials__item">
+      </div>
+      <div class="s-testimonials__item">
         <p class="s-testimonials__item-inner"><span class="_blue"><?= esc_html($googleReviewScore ?: '5.0'); ?></span>
           <span class="_orange">★★★★★</span> Google Reviews
         </p>
-      </h5>
-      <h5 class="s-testimonials__item">
+      </div>
+      <div class="s-testimonials__item">
         <p class="s-testimonials__item-inner">We work on a contingency fee basis. <span class="_blue">No fee unless we win.</span></p>
-      </h5>
+      </div>
     </div>
   </div>
 
