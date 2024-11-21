@@ -2,6 +2,7 @@ import './vendor/platform-detect.min';
 import './vendor/device.min';
 
 import { Footer } from '../comp-wp/footer/footer';
+import { Search } from '../comp-wp/forms/search-form';
 import { SLAttorneys } from '../components/sliders/sl-attorneys/sl-attorneys';
 import { SLGallery } from '../components/sliders/sl-gallery/sl-gallery';
 import { SLTestimonials } from '../components/sliders/sl-testimonials/sl-testimonials';
@@ -17,6 +18,7 @@ const App = () => {
     $html = $document.find('html'),
     $body = $html.find('body'),
     $footer = $body.find('.back-to-top-wrapper'),
+    $search = $body.find('.search-form'),
     $slAttorneys = $body.find('.sl-attorneys'),
     $slGallery = $body.find('.sl-gallery'),
     $slTestimonials = $body.find('.sl-testimonials'),
@@ -33,6 +35,7 @@ const App = () => {
   /* eslint-enable no-alert, no-console */
 
   $footer.length && Footer.init($document);
+  $search.length && Search.init($document, $search);
   $slAttorneys.length && SLAttorneys($slAttorneys);
   $slGallery.length && SLGallery($slGallery);
   $slTestimonials.length && SLTestimonials($slTestimonials);

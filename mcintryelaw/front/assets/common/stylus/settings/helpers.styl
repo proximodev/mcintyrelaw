@@ -32,10 +32,14 @@
   padding-left $container-padding-desktop
   padding-right $container-padding-desktop
 
-+media-tablet(1024px)
++media-tablet()
   .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-tablet
     padding-right $container-padding-tablet
+
++media-mobile(768px)
+  .one-container .site-content
+    padding-top: 0 !important;
 
 +media-mobile()
   ._mobile
