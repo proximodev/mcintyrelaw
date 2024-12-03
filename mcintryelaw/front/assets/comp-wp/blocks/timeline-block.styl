@@ -33,22 +33,25 @@
       height 63px
       width 86px
       object-fit: contain
-      object-position: left   
+      object-position: left  
 .timeline-vertical-line  
   flex-shrink: 0
-  margin 0 1px 0 auto 
+  margin 0 1px 0 0
   width 3px
   background-image: url(../images/bg/line-v2.svg)
-  background-repeat: no-repeat
-  background-size: contain
+  background-repeat: repeat-y
   background-size: 100%
-  .practice-area &
-    background-image: url(../images/bg/line-v1.svg)  
+  // .practice-area &
+  //   background-image: url(../images/bg/line-v1.svg)  
+
+.gb-container
+  +.timeline-vertical-line
+    margin-left auto      
+
 .timeline-horizontal-line   
   flex-shrink: 0
   background-image: url(../images/bg/line-h2.svg)
   background-repeat: no-repeat
-  background-size: contain 
   background-size: 100%
   width 220px
   height: 3px

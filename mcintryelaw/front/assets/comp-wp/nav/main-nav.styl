@@ -1,62 +1,130 @@
 .main-navigation
   border-top 1px solid $bg-color-red
   .inside-navigation.grid-container
-    max-width: 1220px
+    max-width: 1230px
     justify-content space-between
-    padding 0 20px !important
+    padding 7px 20px !important
     position relative
   .search-wrapper
     margin-left auto  
-  .main-nav
-    >ul
-      >li
-        padding 0 10px
-        a
-          color: #333 !important
-          font-weight: 700;
-          padding-left 0 !important
-          padding-right 0 !important
-          line-height 40px !important
-          border-bottom 2px solid transparent
-          display flex
-          align-items center
-          transition border-color .2s ease-out !important
-          &:hover
-            border-color: $text-color-red
-          &:after
-            content ''
-            display block
-            width: 8px;
-            height: 13px;
-            flex-shrink: 0;
-            background-repeat: no-repeat
-            background-position: center
-            background-size: contain
-            background-image: url('../images/icons/angle-right.svg')
-            margin-left 4px
 
+  .mega-menu-wrap
+    background: none !important
+    flex-grow: 1
+    
+  .mega-menu
+    >li
+      padding 0 10px !important
+      >a
+        color: $text-color-dark !important
+        background: none !important
+        font-weight: 700 !important
+        padding-left 0 !important
+        padding-right 0 !important
+        line-height 40px !important
+        border-bottom 2px solid transparent !important
+        display flex !important
+        align-items center !important
+        transition border-color .2s ease-out !important
+        &:hover
+          background: none !important
+          border-color: $text-color-red !important
+        &:after
+          content ''
+          display block !important
+          width: 8px
+          height: 13px
+          flex-shrink: 0
+          background-repeat: no-repeat
+          background-position: center
+          background-size: contain
+          background-image: url('../images/icons/angle-right.svg')
+          margin-left 4px
+        .mega-indicator
+          display none !important
+    .mega-sub-menu
+      background: none !important
+      a 
+        color: $text-color-dark !important
+        font-size: 14px !important
+        line-height: normal !important  
+      
+      .mega-menu-item:not(.mega-menu-item-type-custom)
+        padding 12px 0 !important
+        a 
+          font-weight: 400 !important
+          text-transform none !important
+      .mega-menu-item-type-custom
+        padding 20px 0 !important
+        border-bottom: 1px solid #A8A8A8 !important
+        margin-bottom 6px !important
+        a 
+          font-weight: 700 !important  
+    .mega-menu-row 
+      position relative 
+      padding 10px 10px 40px !important
+      width 1230px !important
+      &:before
+        content ''
+        display block !important
+        position absolute
+        left -50vw
+        right -50vw
+        top: 0
+        bottom 0
+        background: $bg-color-white
+        box-shadow: 0 10px 10px rgba(0,0,0,0.03)
+      >ul    
+        position relative
+        z-index 1 
+        display: flex !important
+        justify-content: space-between !important
+        li
+          float none !important
+          width auto !important
+        >li:last-child 
+          flex-basis: 364px
+          padding-left 30px !important
+          margin-left -40px !important
+          border-left: 1px solid #A8A8A8 !important
+          img
+            width 100% !important
 
++media-desktop(1230px)   
+  .main-navigation 
+    .mega-menu
+      .mega-menu-row 
+        width calc(100% + 60px) !important
+        >ul    
+          >li:last-child 
+            flex-basis: auto
+            margin-left 20px !important
+       
 +media-tablet()    
   .main-navigation 
     border-top 0
     .search-wrapper
       margin-left 0 
     .search-toggle
-      margin-right -18px  
+      height 30px
     .inside-navigation
-      height 90px
+      height 85px
       justify-content end !important  
+      flex-wrap: nowrap !important
       .menu-toggle
-        flex-grow: 0
+        flex-shrink: 0
         width: 49px;
         height: 42px;
         line-height 42px
         border-radius: 5px;
         border: 2px solid $bg-color-red
-        display flex
+        display flex !important
         align-items center
         justify-content center
-        padding 0
+        padding 0 !important
+        margin-left 20px !important
+        .mobile-menu-open &
+          border: 0
         svg 
           width 27px
           height 21px
@@ -69,11 +137,11 @@
         tro()    
         position: absolute;
         left: 0;
-        top: 248px;
+        top: 246px;
         width: 100%;
         background: $bg-color-white
         z-index: 2;     
-        padding 4px 10px 50px
+        padding 4px 20px 50px
         min-height: calc(100vh - 247px)
         z-index -1
         .mobile-menu-open &
@@ -82,7 +150,44 @@
           z-index 3
         >ul
           >li
-            margin-bottom 5px
-            a
+            &.sfHover 
+              >a 
+                color $text-color-red
+                .dropdown-menu-toggle
+                  svg 
+                    transform: rotate(-180deg)
+
+            a 
               font-size: 16px
+              padding-left 0
+              padding-right 0
+              color $text-color-dark
+            >a
+              display flex
+              align-items center
               border-bottom 0
+              font-weight: 700;
+              trc()
+              .dropdown-menu-toggle
+                padding-left 5px
+                svg 
+                  height: 1.5em;
+                  width: 1.5em;
+                  top: 0.5em;
+                  transform: rotate(-90deg)
+                  trt()    
+        .sub-menu  
+          a
+            font-weight: 400;     
+          .menu-item-type-custom
+            a 
+              display inline-flex
+              font-weight: 700;
+              text-transform: uppercase;
+              padding-bottom 15px
+              padding-top 15px
+              margin-bottom 5px
+              border-bottom: 1px solid #A8A8A8
+          .current-menu-item
+            a
+              color $text-color-red

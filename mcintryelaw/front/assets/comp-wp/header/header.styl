@@ -23,6 +23,10 @@
   font-weight: 600;
   a
     text-decoration underline
+    color $text-color-base !important
+    tro()
+    &:hover
+      opacity: .75
   p
     margin-bottom 0
   .call-us-title
@@ -36,6 +40,8 @@
     margin-left auto
 
 +media-tablet()
+  .header-top-inner-wrapper  
+    flex-basis: auto
   .inside-header
     position absolute
     left 0
@@ -46,15 +52,19 @@
     flex-direction: row !important
   .site-logo
     flex-shrink: 0
+    width: 223px
+    max-width: 60% !important
+    margin: 0 20px 0 0 !important
     img
-      width: 223px !important
+      width: 100% !important
+      height auto !important
   .header-inner-tag   
     display none
   .header-button-group
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 0 20px 10px;
+    padding: 0 20px 20px;
     background: $bg-color-white
     width: 100vw;
     opacity 0
@@ -62,7 +72,12 @@
     z-index -1
     text-align: left;
     tro()
-    font-size: 16px;
+    a 
+      display inline !important
+      font-size: 16px !important
+      font-weight: 600 !important
+      line-height: normal !important
+      text-decoration-line: underline !important
     .mobile-menu-open &
       opacity 1
       pointer-events: all
