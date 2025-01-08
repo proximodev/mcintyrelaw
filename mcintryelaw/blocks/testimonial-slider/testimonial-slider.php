@@ -2,8 +2,8 @@
 /**
 * Block Name: Testimonial Slider
 */
-include( get_theme_file_path("/inc/functions/get-youtube-id.php") );
-include( get_theme_file_path("/inc/functions/get-image-properties.php") );
+include_once( get_theme_file_path("/inc/functions/get-youtube-id.php") );
+include_once( get_theme_file_path("/inc/functions/get-image-properties.php") );
 
 $testimonialHeader = get_field( 'testimonial_header');
 $testimonialDescription = get_field( 'testimonial_description');
@@ -52,8 +52,6 @@ $googleReviewScore = get_field( 'google_review_score');
             <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#play"></use>
           </svg>
         </div>
-        <?php else: ?>
-        <p>Error: YouTube URL not found</p>
         <?php endif; ?>
 
       <?php endwhile; ?>
