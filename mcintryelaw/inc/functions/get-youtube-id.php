@@ -12,7 +12,6 @@
 function get_youtube_id_from_url($url) {
     // Check if the URL has an embed code with the video ID
     if ($url) {
-        // Extract the src attribute if it's an embed HTML
         preg_match('/src="(.+?)"/', $url, $matches_url);
         $src = isset($matches_url[1]) ? $matches_url[1] : $url; // Use original URL if no src found
 
