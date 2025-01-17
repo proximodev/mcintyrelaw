@@ -13,22 +13,6 @@
 			"view": "gallery"
 		}
 	},
-	"slGallery": {
-		"list": [
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			}
-		]
-	},
 	"sTiles": {
 		"list": [
 			{
@@ -65,34 +49,6 @@
 			}
 		]
 	},
-	"slTestimonials": {
-		"list": [
-			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "0I647GU3Jsc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "0I647GU3Jsc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "0I647GU3Jsc"
-			}
-		]
-	},
 	"slAttorneys": {
 		"list": [
 			{
@@ -126,6 +82,50 @@
 			{
 				"img": "assets/images/slides/atty-4.png",
 				"title": "Monica Schweighart"
+			}
+		]
+	},
+	"slTestimonials": {
+		"list": [
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "0I647GU3Jsc"
+			}
+		]
+	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
 			}
 		]
 	}
