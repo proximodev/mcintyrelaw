@@ -1,39 +1,17 @@
 {
-	"slAttorneys": {
-		"list": [
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			},
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			}
-		]
+	"modalDefault": {
+		"yt": {
+			"className": "modal-video",
+			"yt": "W9A8fsDN1kU"
+		},
+		"video": {
+			"className": "modal-video",
+			"video": "videos/envideo1.mp4"
+		},
+		"gallery": {
+			"className": "_light modal-gallery",
+			"view": "gallery"
+		}
 	},
 	"sTiles": {
 		"list": [
@@ -115,18 +93,40 @@
 			}
 		]
 	},
-	"modalDefault": {
-		"yt": {
-			"className": "modal-video",
-			"yt": "W9A8fsDN1kU"
-		},
-		"video": {
-			"className": "modal-video",
-			"video": "videos/envideo1.mp4"
-		},
-		"gallery": {
-			"className": "_light modal-gallery",
-			"view": "gallery"
-		}
+	"slAttorneys": {
+		"list": [
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			},
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			}
+		]
 	}
 }
