@@ -1,17 +1,39 @@
 {
-	"modalDefault": {
-		"yt": {
-			"className": "modal-video",
-			"yt": "W9A8fsDN1kU"
-		},
-		"video": {
-			"className": "modal-video",
-			"video": "videos/envideo1.mp4"
-		},
-		"gallery": {
-			"className": "_light modal-gallery",
-			"view": "gallery"
-		}
+	"slAttorneys": {
+		"list": [
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			},
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			}
+		]
 	},
 	"sTiles": {
 		"list": [
@@ -46,42 +68,6 @@
 			{
 				"img": "assets/images/tiles/tile-5.png",
 				"title": "Bus <br> Accidents"
-			}
-		]
-	},
-	"slAttorneys": {
-		"list": [
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			},
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
 			}
 		]
 	},
@@ -128,5 +114,19 @@
 				"yt": "0I647GU3Jsc"
 			}
 		]
+	},
+	"modalDefault": {
+		"yt": {
+			"className": "modal-video",
+			"yt": "W9A8fsDN1kU"
+		},
+		"video": {
+			"className": "modal-video",
+			"video": "videos/envideo1.mp4"
+		},
+		"gallery": {
+			"className": "_light modal-gallery",
+			"view": "gallery"
+		}
 	}
 }
