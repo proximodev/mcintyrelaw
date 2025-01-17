@@ -13,6 +13,22 @@
 			"view": "gallery"
 		}
 	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			}
+		]
+	},
 	"sTiles": {
 		"list": [
 			{
@@ -46,22 +62,6 @@
 			{
 				"img": "assets/images/tiles/tile-5.png",
 				"title": "Bus <br> Accidents"
-			}
-		]
-	},
-	"slGallery": {
-		"list": [
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
 			}
 		]
 	},
