@@ -56,6 +56,8 @@
         a 
           font-weight: 400 !important
           text-transform none !important
+          &[aria-current=page] 
+            color $red !important
       .mega-menu-item.label
         padding 20px 0 !important
         border-bottom: 1px solid #A8A8A8 !important
@@ -82,17 +84,17 @@
         z-index 1 
         display: flex !important
         justify-content: space-between !important
+        column-gap: 40px
         li
           float none !important
         >li
-          &:not(:first-child) 
-            padding-left 30px !important
+          width auto !important
           &:last-child  
-            border-left: 1px solid #A8A8A8 !important
+            flex-basis: 364px
+            padding-left 30px !important
+            margin-left -40px !important
             img
               width 100% !important
-          >ul
-            width fit-content !important    
        
 +media-desktop(1279px)     
   .main-navigation 
