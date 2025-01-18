@@ -49,6 +49,42 @@
 			}
 		]
 	},
+	"slAttorneys": {
+		"list": [
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			},
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			}
+		]
+	},
 	"slGallery": {
 		"list": [
 			{
@@ -90,42 +126,6 @@
 			{
 				"img": "assets/images/slides/testimonial-3.png",
 				"yt": "0I647GU3Jsc"
-			}
-		]
-	},
-	"slAttorneys": {
-		"list": [
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			},
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
 			}
 		]
 	}
