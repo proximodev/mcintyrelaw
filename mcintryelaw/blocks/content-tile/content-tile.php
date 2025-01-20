@@ -5,6 +5,7 @@
 
 $contentColumns = get_field("content_columns");
 $includeDescription = get_field("include_description");
+$includeDescriptionClass = "";
 
 if ($includeDescription) {
     $includeDescriptionClass = "_include-description";
@@ -24,7 +25,7 @@ if ($includeDescription) {
                         $contentImageAlt = $contentImage['alt'];
                     } else {
                         $contentImage = get_post_thumbnail_id( $selectedPost->ID );
-                        $contentImageURL = get_the_post_thumbnail_url($selectedPost->ID,'medium');
+                        $contentImageURL = get_the_post_thumbnail_url($selectedPost->ID,'tiles');
                         $contentImageAlt = get_post_meta($contentImage, '_wp_attachment_image_alt', true);
                     }
 
