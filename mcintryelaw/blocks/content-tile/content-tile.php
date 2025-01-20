@@ -5,7 +5,12 @@
 
 $contentColumns = get_field("content_columns");
 $includeDescription = get_field("include_description");
+$contentTitleSize = get_field( 'content_title_size');
 $includeDescriptionClass = "";
+
+if (!$contentTitleSize) {
+    $contentTitleSize = "h3";
+}
 
 if ($includeDescription) {
     $includeDescriptionClass = "_include-description";
@@ -52,7 +57,7 @@ if ($includeDescription) {
                             <div class="s-tiles__item-hover">
                             </div>
                             <div class="s-tiles__item-info">
-                                <h4 class="s-tiles__item-title"><?= $contentTitle; ?></h4>
+                                <<?= $contentTitleSize; ?> class="s-tiles__item-title"><?= $contentTitle; ?></<?= $contentTitleSize; ?>>
                                 <svg class="svg svg-b-angle-wr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <use xlink:href="<?= get_stylesheet_directory_uri() ?>/assets/images/_set.svg#b-angle-wr"></use>
                                 </svg>
