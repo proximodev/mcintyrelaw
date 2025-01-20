@@ -14,6 +14,9 @@
     &.breadcrumb_last
       font-weight 400  
 
+.container.grid-container .site-content main article .inside-article section.gb-container
+  margin-bottom 60px
+
 .grid-container.container
   max-width: $container-max-width    
 
@@ -31,6 +34,12 @@
   padding-left $container-padding-desktop
   padding-right $container-padding-desktop
 
+.no-margin-bottom
+  margin-bottom: 0px !important;
+   
+.no-padding-bottom
+  padding-bottom: 0px !important;
+    
 +media-tablet()
   .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-tablet
@@ -47,6 +56,9 @@
     display none !important
 
 +media-mobile(600px)
+  .container.grid-container .site-content main article .inside-article section.gb-container
+    margin-bottom 40px
+    
   .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
     padding-left $container-padding-mobile
     padding-right $container-padding-mobile
