@@ -1,8 +1,5 @@
 .timeline-block
-  padding 0 0 50px
-  margin-bottom 0px !important
-  &.practice-area
-    padding-top 50px
+  margin-bottom: $container-padding-desktop;
   &.alt  
     .timeline-icon-wrapper 
       width auto
@@ -62,16 +59,19 @@
   margin 15px 12px 0 0
   .practice-area &
     width 82px
-    background-image: url(../images/bg/line-h1.svg)  
-    margin-top 32px
+    background-image: url(../images/bg/line-h1.svg)
 
 +media-tablet()
+  .timeline-block
+    margin-bottom: $container-padding-tablet;
+    flex-wrap: wrap
   .timeline-horizontal-line
     background-image: url(../images/bg/line-h1.svg)
     width 72px !important
 
 +media-mobile()
   .timeline-block
+    margin-bottom: $container-padding-mobile;
     flex-wrap: wrap
   #timeline-text-wrapper
     width 100% !important

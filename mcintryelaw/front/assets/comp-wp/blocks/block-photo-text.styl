@@ -1,6 +1,5 @@
 .block-photo-text 
-  padding 50px 0
-  margin-bottom: 0px !important;
+  margin-bottom: $container-padding-desktop;
   &._text-left
     .photo-text-inner
       justify-content start
@@ -56,7 +55,7 @@
 
 +media-tablet(900px)    
   .block-photo-text 
-    padding-bottom 0
+    margin-bottom: $container-padding-tablet;
     &._mobile-img-bottom
       padding-bottom 50px
       .block-image
@@ -82,6 +81,7 @@
 
 +media-mobile(768px)
   .block-photo-text 
+    margin-bottom: $container-padding-mobile;
     .block-content
       margin: -8% -40px 0 !important 
 
