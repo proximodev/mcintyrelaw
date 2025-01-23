@@ -1,0 +1,22 @@
+mixin s-videos(o = {})
+
+  +b.SECTION.s-videos
+    .container 
+      +e.H2.title  more ask a lawyer episodes
+      +e.list-wrapper
+        +e.list
+          each item in sVideos.list
+            +e.item
+              +e.item-inner
+                //- +e.IMG.item-img(src=item.img alt='video image')
+                //- +svg({name: 'play'})
+                +s-media({
+                  className: '_overlay',
+                  img: item.img,
+                  yt: item.yt
+                })
+                +e.item-info
+                  +e.H5.item-title !{item.title}
+
+      +e.btn-wrapper
+        .gb-button.js-more View more

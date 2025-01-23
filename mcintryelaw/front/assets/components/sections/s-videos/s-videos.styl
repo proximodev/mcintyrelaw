@@ -1,0 +1,78 @@
+.s-video
+  padding 100px 0 60px
+  position relative
+  &:before
+    content ''
+    display block
+    position absolute
+    top 50%
+    left 0
+    width 100%
+    height 100%
+    background: $bg-color-blue
+    z-index -1
+  h3
+    margin-bottom 40px
+    text-align center  
+.s-videos
+  padding 60px 0 105px
+  background: $bg-color-blue
+  &__title
+    margin-bottom 30px
+  &__list
+    display grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 22px
+    row-gap: 22px
+    &-wrapper
+      height: 560px
+      overflow: hidden
+      transition: height .3s ease-out
+  &__item
+    height 100%
+    &:nth-child(3) ~ .s-videos__item 
+      tro()
+      opacity .35
+      pointer-events: none
+    ._opened &
+      opacity 1 !important
+      pointer-events: all !important
+    &-img
+      width 100%
+      height 224px
+      object-fit: cover 
+    &-info
+      padding 40px 20px 16px
+      background: $bg-color-white
+    &-title
+      color $text-color-red
+      text-align: center;
+      min-height: 80px
+      max-width: 240px
+      margin 0 auto
+  &__btn-wrapper  
+      text-align center
+      margin-top 30px
+  .s-media__inner
+    padding-top 66.4%   
+  ._abs  
+    abs()
+        
++media-mobile()
+  .s-videos
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+    &__item  
+      &:nth-child(2) ~ .s-videos__item 
+        opacity .35
+        pointer-events: none
+       
++media-mobile(480px)
+  .s-videos
+    &__list
+      grid-template-columns: repeat(1, 1fr)
+    &__item  
+      &:first-child ~ .s-videos__item 
+        opacity .35
+        pointer-events: none
+  

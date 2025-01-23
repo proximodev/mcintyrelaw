@@ -1,5 +1,18 @@
 const Modal = (() => {
     let thisModal;
+    let scriptLoaded = false;
+    const SCRIPT_SRC = 'https://www.youtube.com/iframe_api';
+
+    function loadScript(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        var firstScript = document.getElementsByTagName('script')[0];
+        script.type = "text/javascript";
+        script.onload = function() {
+            console.log('--------- YT script is ready ------');
+        };
+        firstScript.parentNode.insertBefore(script, firstScript);
+     }
 
     const closeModal = (thisModal, $html) => {
         if(!thisModal?.length) return;
@@ -63,7 +76,20 @@ const Modal = (() => {
                 if (e.keyCode === 27) {
                     closeModal(thisModal, $html);
                 }
-            });
+            })
+
+            .on('mousemove', function() {
+                if(scriptLoaded) return;
+                
+                loadScript(SCRIPT_SRC);
+                scriptLoaded = true;
+            })   
+            .on('touchstart', function() {
+                if(scriptLoaded) return;
+                
+                loadScript(SCRIPT_SRC);
+                scriptLoaded = true;
+            });    
     }
 
     return {
@@ -75,5 +101,5 @@ const Modal = (() => {
 
 })();
 
-export {Modal}
+export { Modal }
 

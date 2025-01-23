@@ -6,6 +6,7 @@ import { Search } from '../comp-wp/forms/search-form';
 import { SLAttorneys } from '../components/sliders/sl-attorneys/sl-attorneys';
 import { SLGallery } from '../components/sliders/sl-gallery/sl-gallery';
 import { SLTestimonials } from '../components/sliders/sl-testimonials/sl-testimonials';
+import { SVideos } from '../components/sections/s-videos/s-videos';
 import { FDefault } from '../components/forms/f-default/f-default';
 import { Modal } from '../components/modals/_modal-default/modal-default';
 
@@ -22,6 +23,7 @@ const App = () => {
     $slAttorneys = $body.find('.sl-attorneys'),
     $slGallery = $body.find('.sl-gallery'),
     $slTestimonials = $body.find('.sl-testimonials'),
+    $sVideos = $body.find('.s-videos'),
     $fDefault = $body.find('.custom-form'),
     $modal = $body.find('.modal-default');
 
@@ -41,6 +43,7 @@ const App = () => {
   $slTestimonials.length && SLTestimonials($slTestimonials);
   $modal.length && Modal.init($document, $html);
   $fDefault.length && FDefault.init($document, $fDefault);
+  $sVideos.length && SVideos.init($document, $sVideos);
  
 };
 

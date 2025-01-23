@@ -1,0 +1,23 @@
+extends ../common/pug/layout.pug
+
+block variables
+  -
+    var PAGEINFO = {
+      title: 'McIntyreLaw',
+      description: 'McIntyreLaw Videos page'
+    }
+
+block content
+  body.p-videos
+    section.s-video 
+      .container
+        h3 Casino Dad - Ask a Lawyer 3-27-24
+        +s-media({
+          className: '_overlay',
+          img: 'assets/images/slides/gallery-1.png',
+          yt: '7wtfhZwyrcc'
+        })
+    +s-videos()
+    +modal-default({yt: true})
+    +scripts({scripts: 
+      ['assets/js/vendor/jquery.min.js', 'assets/js/vendor/slick.min.js']})
