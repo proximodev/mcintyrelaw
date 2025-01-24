@@ -10,6 +10,8 @@ $youTubeURL = get_field('youtube_url');
 $imageObject = get_field( 'image_object');
 $imageSize = get_field( 'image_size');
 
+if ($imageSize == "full") { $imageSize = "full-width"; }
+
 $videoPosterImageAttributes = get_image_properties($imageObject, $imageSize);
 $videoPosterImageSrc = isset($videoPosterImageAttributes['src']) ? esc_url($videoPosterImageAttributes['src']) : '';
 $videoPosterImageAlt = isset($videoPosterImageAttributes['alt']) ? esc_attr($videoPosterImageAttributes['alt']) : '';
