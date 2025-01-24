@@ -1,0 +1,28 @@
+mixin s-video-logos(o = {})
+
+  +b.SECTION.s-video-logos
+    .container 
+      +e.top
+        +e.H2.title Giving Back to the Oklahoma City Community
+        +e.P.text Noble and the McIntyre Law team know that every client is also a neighbor and valued member of the community. Our mission to support the community extends well beyond the courthouse doors! We work hard to give back through our Day of Kindness, by honoring Oklahoma’s exceptional young people with A Noble Cause and in providing accessible and light-hearted legal analysis on the public airwaves with Ask a Lawyer.
+        +e.A.link(href='#') Read the latest Noble in the News
+
+      +e.inner
+        +e.main
+          +s-media({
+            className: '_overlay',
+            img: 'assets/images/tiles/tile-4.png',
+            yt: '0I647GU3Jsc',
+          })
+          +e.main-logo
+            img(src='assets/images/logos/logo-main.webp' alt='bg image')
+        +e.list
+          each item in sVideoLogos.list
+            +e.item
+              +s-media({
+                className: '_overlay',
+                img: item.img,
+                yt: item.yt
+              })
+              +e.item-logo
+                img(src=item.logo alt='bg image')                           
