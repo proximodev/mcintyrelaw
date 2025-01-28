@@ -4,7 +4,7 @@
 *
 * Example usage:
 * $videoId = "dQw4w9WgXcQ"; // Example YouTube video ID
-* echo getYoutubeVideoTitle($videoId);
+* echo getYoutubeVideoTitle(youTubeID);
 *
 */
 
