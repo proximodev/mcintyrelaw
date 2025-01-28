@@ -1,5 +1,5 @@
 .s-video
-  padding 100px 0 60px
+  padding 0px 50px 20px
   position relative
   &:before
     content ''
@@ -59,6 +59,8 @@
     abs()
         
 +media-mobile()
+  .s-video
+    padding 0px 40px 0px
   .s-videos
     padding 60px 40px 105px
     &__list
@@ -69,6 +71,8 @@
         pointer-events: none
        
 +media-mobile(480px)
+  .s-video
+    padding 0px 30px 0px
   .s-videos
     padding 60px 30px 105px
     &__list
