@@ -1,15 +1,15 @@
 <?php
 /**
  * Defines ACF blocks
- * https://www.advancedcustomfields.com/resources/acf_register_block_type/
+ * https://www.advancedcustomfields.com/resources/acf_register_block_type_type/
  */
 
 add_action('acf/init', 'my_acf_init');
 
 function my_acf_init() {
-    if( function_exists('acf_register_block') ) {
+    if( function_exists('acf_register_block_type') ) {
 
-        acf_register_block(array(
+        acf_register_block_type(array(
             'name'              => 'gallery-block',
             'title'             => __('Gallery'),
             'description'       => __('Gallery compoment for photos'),
@@ -21,7 +21,7 @@ function my_acf_init() {
             'mode'              => 'edit',
         ));
 
-        acf_register_block(array(
+        acf_register_block_type(array(
             'name'              => 'gallery-slider',
             'title'             => __('Gallery Slider'),
             'description'       => __('Image slider component'),
@@ -33,7 +33,7 @@ function my_acf_init() {
             'mode'              => 'edit',
         ));
 
-        acf_register_block(array(
+        acf_register_block_type(array(
             'name'              => 'content-tile',
             'title'             => __('Content Tile'),
             'description'       => __('Tile linked to pages and posts'),
@@ -45,7 +45,7 @@ function my_acf_init() {
             'mode'              => 'edit',
         ));
 
-        acf_register_block(array(
+        acf_register_block_type(array(
             'name'              => 'people-block',
             'title'             => __('People'),
             'description'       => __('Tile linked to pages and posts'),
@@ -57,7 +57,7 @@ function my_acf_init() {
             'mode'              => 'edit',
         ));
 
-        acf_register_block(array(
+        acf_register_block_type(array(
             'name'              => 'testimonial-slider',
             'title'             => __('Testimonial Video Slider'),
             'description'       => __('Slider with testimonial videos'),
@@ -69,10 +69,24 @@ function my_acf_init() {
             'mode'              => 'edit',
         ));
 
-        acf_register_block(array(
+        acf_register_block_type(array(
             'name'              => 'video-block',
             'title'             => __('Video Block'),
             'description'       => __('Block with support for YouTube'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'media',
+            'icon'              => 'format-image',
+            'keywords'          => array( 'media', 'video', 'youtube' ),
+            'post_types'        => array('post', 'page', 'practice-area'),
+            'mode'              => 'edit',
+            //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
+        ));
+
+
+        acf_register_block_type(array(
+            'name'              => 'video-tiles',
+            'title'             => __('Video Tiles'),
+            'description'       => __('List of videos in tile format with support for YouTube'),
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'media',
             'icon'              => 'format-image',
@@ -91,4 +105,5 @@ function my_acf_block_render_callback( $block ) {
         include( get_theme_file_path("/blocks/{$slug}/{$slug}.php") );
     }
 }
+
 ?>

@@ -1,5 +1,13 @@
 <?php
 /*
+* Block Editor Styles
+*/
+add_action('enqueue_block_editor_assets', 'theme_block_editor_styles');
+function theme_block_editor_styles() {
+    wp_enqueue_style('admin-styles', get_theme_file_uri('/assets/css/block_editor_styles.css'),  array(), CHILD_THEME_VERSION, false);
+}
+
+/*
 * Remove WordPress bloat
 */
 
@@ -32,7 +40,9 @@ function dequeue_dashicons() {
     }
 }
 
-// Allow execution of php with generate blocks
+/*
+* Allow execution of php with generate blocks
+*/
 add_filter( 'generate_hooks_execute_php', '__return_true' );
 
 /*
