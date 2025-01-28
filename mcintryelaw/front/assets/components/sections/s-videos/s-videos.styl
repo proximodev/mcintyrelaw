@@ -15,7 +15,7 @@
     margin-bottom 40px
     text-align center  
 .s-videos
-  padding 60px 0 105px
+  padding 60px 50px 105px
   background: $bg-color-blue
   &__title
     margin-bottom 30px
@@ -60,6 +60,7 @@
         
 +media-mobile()
   .s-videos
+    padding 60px 40px 105px
     &__list
       grid-template-columns: repeat(2, 1fr)
     &__item  
@@ -69,6 +70,7 @@
        
 +media-mobile(480px)
   .s-videos
+    padding 60px 30px 105px
     &__list
       grid-template-columns: repeat(1, 1fr)
     &__item  
