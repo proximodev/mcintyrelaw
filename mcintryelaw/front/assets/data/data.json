@@ -153,22 +153,6 @@
 			}
 		]
 	},
-	"slGallery": {
-		"list": [
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			}
-		]
-	},
 	"slTestimonials": {
 		"list": [
 			{
@@ -194,6 +178,22 @@
 			{
 				"img": "assets/images/slides/testimonial-3.png",
 				"yt": "0I647GU3Jsc"
+			}
+		]
+	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
 			}
 		]
 	}

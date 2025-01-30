@@ -1,0 +1,32 @@
+.bio-banner
+  padding 100px 0
+  .bio-banner-inner
+    column-gap: 40px
+    justify-content space-between
+    align-items center
+  .text-wrapper
+    flex-basis: 600px
+  h2
+    font-size: 40px
+  p
+    margin-bottom 28px  
+  .image-wrapper
+    flex-basis: 500px  
+    img
+      width 100%
+      height 100%
+      object-fit: cover
+      border-radius: 50%
+      border 3px solid $blue
+  .gb-button
+    margin-top 20px
+    &:not(:last-child)
+      margin-right 20px
+
++media-mobile()
+  .bio-banner
+    .bio-banner-inner
+      display block
+    .text-wrapper
+      margin-bottom 40px  
+
