@@ -17,6 +17,8 @@
 .s-videos
   padding 60px 50px 105px
   background: $bg-color-blue
+  &.white-bg
+    background: $bg-color-white
   &__title
     margin-bottom 30px
   &__list
@@ -28,13 +30,16 @@
       height: 560px
       overflow: hidden
       transition: height .3s ease-out
+      &.view-all
+        height: auto
   &__item
     height 100%
     &:nth-child(3) ~ .s-videos__item 
       tro()
       opacity .35
       pointer-events: none
-    ._opened &
+    ._opened &,
+    .view-all &
       opacity 1 !important
       pointer-events: all !important
     &-img
@@ -42,13 +47,16 @@
       height 224px
       object-fit: cover 
     &-info
-      padding 40px 20px 16px
+      padding 16px 20px
       background: $bg-color-white
+      display flex
+      align-items center
+      justify-content center
+      min-height: 136px
     &-title
       color $text-color-red
       text-align: center;
-      min-height: 80px
-      margin 0 auto
+      margin-bottom 0
   &__btn-wrapper  
       text-align center
       margin-top 30px
