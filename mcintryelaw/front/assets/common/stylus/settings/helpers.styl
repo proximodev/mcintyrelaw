@@ -34,14 +34,16 @@
   padding-left $container-padding-desktop
   padding-right $container-padding-desktop
 
-section.gb-container > .gb-container.inside-padding, section.gb-container > .wp-block-group.inside-padding
+section.gb-container > .gb-container.inside-padding, 
+section.gb-container > .wp-block-group.inside-padding,
+section.gb-container.text-block-container > .wp-block-group
   padding-top $container-padding-desktop
   padding-bottom $container-padding-desktop
 
 section.gb-container > .gb-container.inside-padding > p:last-child,
-section.gb-container > .wp-block-group.inside-padding > .wp-block-group__inner-container > p:last-child {
+section.gb-container > .wp-block-group.inside-padding > .wp-block-group__inner-container > p:last-child,
+section.gb-container.text-block-container > .wp-block-group > .wp-block-group__inner-container > p:last-child
   margin-bottom: 5px;
-}
 
 .no-margin-bottom
   margin-bottom: 0px !important;
@@ -54,7 +56,9 @@ section.gb-container > .wp-block-group.inside-padding > .wp-block-group__inner-c
     padding-left $container-padding-tablet
     padding-right $container-padding-tablet
     
-  section.gb-container > .gb-container.inside-padding, section.gb-container > .wp-block-group.inside-padding
+  section.gb-container > .gb-container.inside-padding, 
+  section.gb-container > .wp-block-group.inside-padding,
+  section.gb-container.text-block-container > .wp-block-group
     padding-top $container-padding-tablet
     padding-bottom $container-padding-tablet
 
@@ -76,6 +80,8 @@ section.gb-container > .wp-block-group.inside-padding > .wp-block-group__inner-c
     padding-left $container-padding-mobile
     padding-right $container-padding-mobile
 
-  section.gb-container > .gb-container.inside-padding, section.gb-container > .wp-block-group.inside-padding
+  section.gb-container > .gb-container.inside-padding,
+  section.gb-container > .wp-block-group.inside-padding,
+  section.gb-container.text-block-container > .wp-block-group
     padding-top $container-padding-mobile
     padding-bottom $container-padding-mobile
