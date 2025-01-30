@@ -52,13 +52,15 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
   padding-bottom: 0px !important;
     
 +media-tablet()
-  .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
-    padding-left $container-padding-tablet
-    padding-right $container-padding-tablet
+  .gb-container.full-width > .gb-container, 
+  .gb-container.full-width > .wp-block-columns,
+  .one-container .site-content
+    padding-left $container-padding-tablet !important
+    padding-right $container-padding-tablet !important
     
   section.gb-container > .gb-container.inside-padding, 
   section.gb-container > .wp-block-group.inside-padding,
-  section.gb-container.text-block-container > .wp-block-group
+  section.gb-container.text-block-container > .wp-block-group,
     padding-top $container-padding-tablet
     padding-bottom $container-padding-tablet
 
@@ -76,9 +78,11 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
   .container.grid-container .site-content main article .inside-article section.gb-container
     margin-bottom 40px
       
-  .gb-container.full-width > .gb-container, .gb-container.full-width > .wp-block-columns
-    padding-left $container-padding-mobile
-    padding-right $container-padding-mobile
+  .gb-container.full-width > .gb-container, 
+  .gb-container.full-width > .wp-block-columns,
+  .one-container .site-content
+    padding-left $container-padding-mobile !important
+    padding-right $container-padding-mobile !important
 
   section.gb-container > .gb-container.inside-padding,
   section.gb-container > .wp-block-group.inside-padding,

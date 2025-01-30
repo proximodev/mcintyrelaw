@@ -57,7 +57,7 @@
   ._abs  
     abs()
         
-+media-mobile()
++media-tablet()
   .s-video
     padding 0px 40px 0px
   .s-videos
@@ -69,11 +69,13 @@
         opacity .35
         pointer-events: none
        
-+media-mobile(480px)
++media-mobile(600px)
   .s-video
     padding 0px 30px 0px
+    margin 0 -30px
   .s-videos
     padding 60px 30px 105px
+    margin 0 -30px
     &__list
       grid-template-columns: repeat(1, 1fr)
     &__item  
