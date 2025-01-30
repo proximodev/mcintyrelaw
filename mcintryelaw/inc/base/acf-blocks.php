@@ -41,7 +41,6 @@ function my_acf_init() {
             'category'          => 'content',
             'icon'              => 'format-image',
             'keywords'          => array( 'tiles', 'content'),
-            'post_types'        => array('post', 'page', 'practice-area'),
             'mode'              => 'edit',
         ));
 
