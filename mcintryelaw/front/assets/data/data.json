@@ -13,25 +13,6 @@
 			"view": "gallery"
 		}
 	},
-	"sVideoLogos": {
-		"list": [
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-1.png",
-				"logo": "assets/images/logos/logo-1.webp"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-2.png",
-				"logo": "assets/images/logos/logo-2.webp"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-3.png",
-				"logo": "assets/images/logos/logo-3.webp"
-			}
-		]
-	},
 	"sTiles": {
 		"list": [
 			{
@@ -65,6 +46,74 @@
 			{
 				"img": "assets/images/tiles/tile-5.png",
 				"title": "Bus <br> Accidents"
+			}
+		]
+	},
+	"sVideoLogos": {
+		"list": [
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-1.png",
+				"logo": "assets/images/logos/logo-1.webp"
+			},
+			{
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-2.png",
+				"logo": "assets/images/logos/logo-2.webp"
+			},
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-3.png",
+				"logo": "assets/images/logos/logo-3.webp"
+			}
+		]
+	},
+	"sVideos": {
+		"list": [
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-1.png",
+				"title": "Casino Dad - Ask a Lawyer 3-27-24"
+			},
+			{
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-2.png",
+				"title": "Man Sues Airbnb - Ask a Lawyer 3-9-24"
+			},
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-3.png",
+				"title": "Salary Employees - Ask a Lawyer 2-29-24"
+			},
+			{
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-4.png",
+				"title": "Man Sues Airbnb - Ask a Lawyer 3-11-24"
+			},
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-5.png",
+				"title": "Man Sues Airbnb - Ask a Lawyer 13-10-24"
+			},
+			{
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-6.png",
+				"title": "Man Sues Airbnb - Ask a Lawyer 23-9-24"
+			},
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-1.png",
+				"title": "Casino Dad - Ask a Lawyer 3-27-24"
+			},
+			{
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-2.png",
+				"title": "Man Sues Airbnb - Ask a Lawyer 3-9-24"
+			},
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-3.png",
+				"title": "Salary Employees - Ask a Lawyer 2-29-24"
 			}
 		]
 	},
@@ -117,55 +166,6 @@
 			},
 			{
 				"img": "assets/images/slides/gallery-2.png"
-			}
-		]
-	},
-	"sVideos": {
-		"list": [
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-1.png",
-				"title": "Casino Dad - Ask a Lawyer 3-27-24"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-2.png",
-				"title": "Man Sues Airbnb - Ask a Lawyer 3-9-24"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-3.png",
-				"title": "Salary Employees - Ask a Lawyer 2-29-24"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-4.png",
-				"title": "Man Sues Airbnb - Ask a Lawyer 3-11-24"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-5.png",
-				"title": "Man Sues Airbnb - Ask a Lawyer 13-10-24"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-6.png",
-				"title": "Man Sues Airbnb - Ask a Lawyer 23-9-24"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-1.png",
-				"title": "Casino Dad - Ask a Lawyer 3-27-24"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-2.png",
-				"title": "Man Sues Airbnb - Ask a Lawyer 3-9-24"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-3.png",
-				"title": "Salary Employees - Ask a Lawyer 2-29-24"
 			}
 		]
 	},
