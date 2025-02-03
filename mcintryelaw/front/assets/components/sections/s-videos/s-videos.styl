@@ -29,14 +29,21 @@
     grid-template-columns: repeat(3, 1fr)
     column-gap: 22px
     row-gap: 22px
+    &.two-col
+      grid-template-columns: repeat(2, 1fr)
+      row-gap: 50px
+      column-gap: 30px
     &-wrapper
       height: 560px
-      overflow: hidden
+      overflow-y: hidden
       transition: height .3s ease-out
       &.view-all
         height: auto
+      .white-bg &
+        overflow-y: visible
   &__item
     height 100%
+    box-shadow: 0px 0px 7.8px 4px rgba(0, 0, 0, 0.05);
     &:nth-child(3) ~ .s-videos__item 
       tro()
       opacity .35
@@ -87,8 +94,10 @@
   .s-videos
     padding 60px 30px 105px
     margin 0 -30px
+    &.white-bg
+      padding 60px 30px 105px
     &__list
-      grid-template-columns: repeat(1, 1fr)
+      grid-template-columns: repeat(1, 1fr) !important
       &-wrapper
         height 1320px
     &__item  
