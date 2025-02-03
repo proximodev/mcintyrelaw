@@ -4,13 +4,17 @@
 */
 
 $blockHeader = get_field( 'block_header');
+$blockHeaderSize = get_field( 'block_header_size');
+if (!$blockHeaderSize) {
+    $blockHeaderSize = "h2";
+}
 $blockDescription = get_field( 'block_description');
 $buttonLabel = get_field( 'button_label');
 $buttonURL = get_field( 'button_url');
 ?>
 <section class="sl-attorneys">
     <?php if($blockHeader): ?>
-    <h2 class="sl-attorneys__title"><?= $blockHeader; ?></h2>
+    <<?= $blockHeaderSize; ?> class="sl-attorneys__title"><?= $blockHeader; ?></<?= $blockHeaderSize; ?>>
     <?php endif; ?>
 
     <?php if($blockDescription): ?>

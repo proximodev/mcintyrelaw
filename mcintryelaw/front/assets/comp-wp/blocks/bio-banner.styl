@@ -1,0 +1,50 @@
+.bio-banner
+  padding 100px 0
+  .bio-banner-inner
+    column-gap: 40px
+    justify-content space-between
+    align-items center
+    position relative
+    min-height: 500px
+  .text-wrapper
+    width 51.3%
+  h2
+    font-size: 40px
+  p
+    margin-bottom 28px  
+  .wp-block-image
+    width 43.7%
+    max-width 560px
+    height: fit-content
+    position absolute
+    right 0
+    top 0
+    bottom 0
+    margin auto 0
+    padding-right 60px
+    img 
+      width 100%
+      height auto
+      object-fit: contain
+      border-radius: 50%
+      border 3px solid $blue
+  .gb-button
+    margin-top 20px
+    &:not(:last-child)
+      margin-right 20px
+
++media-tablet()
+  .bio-banner
+    .wp-block-image
+      padding-right 40px
+
++media-mobile()
+  .bio-banner
+    padding 60px 0
+    .text-wrapper
+    .wp-block-image 
+      width 100%
+    .wp-block-image  
+      padding-right 0
+      position static
+      margin 28px auto 38px

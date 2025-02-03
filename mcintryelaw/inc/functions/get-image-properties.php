@@ -17,7 +17,7 @@ function get_image_properties($imageObject, $size = 'full') {
         $imgTitle = esc_attr($imageObject['title'] ?? '');
     } else {
         // Use placeholder if no image is provided
-        $imgSrc = get_stylesheet_directory_uri() . "/assets/images/placeholder-1080x720.png";
+        $imgSrc = get_stylesheet_directory_uri() . "/assets/images/placeholder-1080x720.svg";
         $imgAlt = "Placeholder Alt";
         $imgTitle = "Placeholder Title";
     }

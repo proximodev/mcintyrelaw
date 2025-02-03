@@ -24,6 +24,8 @@ body
       &:hover
         color $link-color 
         opacity .75
+  .light-blue
+    color $text-color-blue    
 
 
   h1, h2, h3, h4, h5, h6 
@@ -49,6 +51,15 @@ body
 
   h5 
     font-size: 25px
+
+  p, h2, h3, h4 
+    &.headline-kicker
+      titleFontFamily()  
+      color $text-color-red 
+      font-size: 25px
+      text-transform uppercase
+      line-height 1.11
+      margin-bottom 6px
 
 +media-tablet()  
   body

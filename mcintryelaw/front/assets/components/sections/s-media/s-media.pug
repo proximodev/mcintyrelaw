@@ -1,21 +1,6 @@
 mixin s-media(o = {})
 
-  +b.SECTION.s-media(class=o.className || '')
-    .container
-      +e.top
-        +e.H2.title See Job Costing In Action
-      if o.src 
-        +e.inner(data-open-modal='modal-default' data-src=o.src)
-          img(src='assets/images/bg/bg-features.jpg' alt='bg image')
-          +e.overlay
-            +svg({name: 'play-green'})
-      else if o.imgSrc 
-        +e.inner(data-open-modal='modal-default' data-img-src=o.imgSrc)
-          img(src='assets/images/bg/bg-features.jpg' alt='bg image')
-          +e.overlay
-            +svg({name: 'play-green'})  
-      else
-        +e.inner(data-open-modal='modal-default' data-yt-src=o.ytSrc onclick='handler("'+o.yt+'")')
-          img(src='assets/images/bg/bg-features.jpg' alt='bg image')
-          +e.overlay
-            +svg({name: 'play-green'})
+  +b.DIV.s-media(class = o.className || '')
+    +e.inner(data-open-modal='modal-default' data-yt-src='https://www.youtube.com/embed/'+o.yt onclick='handler("'+o.yt+'")')
+      img(src=o.img alt='bg image')
+      +svg({name: 'play'})

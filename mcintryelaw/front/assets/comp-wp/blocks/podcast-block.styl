@@ -1,0 +1,42 @@
+.podcast-block
+  padding 54px 0 60px
+  &._pull-down
+    margin-bottom -84px !important
+    padding-bottom 160px
+    +.s-videos
+      position relative
+
+.podcast-block-inner
+  h2
+    font-size: 40px
+    margin-bottom 26px  
+  p 
+    margin-bottom 34px  
+.channel-item
+  display flex
+  align-items center
+  padding 10px 18px 10px
+  border-left 2px solid $blue
+  min-width 23%
+  img
+    margin-right 14px
+  .wp-block-heading
+    font-size: 35px
+    margin-bottom 0
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+
++media-mobile()
+  .podcast-block
+    padding-top 70px
+    .channel-wrapper
+      display block
+    .channel-item
+      padding 24px 0
+      border-left 0
+      border-bottom 2px solid $blue
+    .podcast-block-inner
+      p 
+        margin-bottom 10px  
+

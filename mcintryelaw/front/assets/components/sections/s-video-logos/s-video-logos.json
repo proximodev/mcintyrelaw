@@ -1,0 +1,19 @@
+{
+  "list": [
+    {
+      "yt": "7wtfhZwyrcc",
+      "img": "assets/images/tiles/tile-1.png",
+      "logo": "assets/images/logos/logo-1.webp"
+    },
+    {
+      "yt": "0I647GU3Jsc",
+      "img": "assets/images/tiles/tile-2.png",
+      "logo": "assets/images/logos/logo-2.webp"
+    },
+    {
+      "yt": "7wtfhZwyrcc",
+      "img": "assets/images/tiles/tile-3.png",
+      "logo": "assets/images/logos/logo-3.webp"
+    }
+  ]
+}
