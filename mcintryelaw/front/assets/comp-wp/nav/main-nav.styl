@@ -51,7 +51,7 @@
         font-size: 14px !important
         line-height: normal !important  
       
-      .mega-menu-item:not(.label)
+      .mega-menu-item:not(.label):not(.view-all)
         padding 12px 0 !important
         a 
           font-weight: 400 !important
@@ -64,7 +64,23 @@
         margin-bottom 6px !important
         a 
           font-weight: 700 !important
-          
+      .mega-menu-item.view-all
+        padding 12px 0 !important
+        a
+          font-weight: 700 !important
+          &:after
+            content: '';
+            position: absolute;
+            display: inline-block !important;
+            margin-top: 4px;
+            margin-left: 5px;
+            width: 8px;
+            height: 13px;
+            flex-shrink: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(../images/icons/angle-right.svg);
     .mega-menu-row 
       position relative 
       padding 10px 10px 40px !important
