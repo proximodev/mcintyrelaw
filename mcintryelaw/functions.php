@@ -34,12 +34,12 @@ include( get_theme_file_path("/inc/base/content-types.php") );
 /*
 * Taxonomies
 */
-include( get_theme_file_path("/inc/base/taxomonies.php") );
+//include( get_theme_file_path("/inc/base/taxomonies.php") );
 
 /*
 * ACF Fields
 */
-include( get_theme_file_path("/inc/base/acf-fields.php") );
+//include( get_theme_file_path("/inc/base/acf-fields.php") );
 
 /*
 * ACF Blocks
