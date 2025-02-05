@@ -7,15 +7,15 @@ $contentColumns = get_field("content_columns");
 $includeDescription = get_field("include_description");
 $contentTitleSize = get_field( 'content_title_size');
 $tileSource = get_field( 'tile_source');
-$includeDescriptionClass = "";
 
-if (!$contentTitleSize) {
-    $contentTitleSize = "h3";
-}
+$includeDescriptionClass = "";
+if (!$contentTitleSize) { $contentTitleSize = "h3"; }
+if (!$tileSource) { $tileSource = "manual"; }
 
 if ($includeDescription) {
     $includeDescriptionClass = "_include-description";
 }
+
 ?>
 
 <?php if ($tileSource=="manual"): ?>
