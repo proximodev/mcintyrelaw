@@ -19,9 +19,9 @@ if ($getImageFromYoutube) {
     if ($imageSize == "full-width") {
         $imageSize = "maxresdefault.jpg";
     } else {
-        $imageSize = "sddefault.jpg";
+        $imageSize = "hqdefault.jpg";
     }
-    $videoPosterImageSrc = "https://i.ytimg.com/vi/" . $youTubeID . "/" . $imageSize;
+    $videoPosterImageSrc = "https://img.youtube.com/vi/" . $youTubeID . "/" . $imageSize;
     $videoPosterImageAlt = $videoTitle;
     $videoPosterImageTitle = $videoTitle;
 

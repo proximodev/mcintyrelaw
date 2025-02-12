@@ -1,0 +1,47 @@
+article.news-press-releases
+  padding-top 55px
+  .news-columns,
+  article  
+    h1 
+      font-size 40px
+      color $text-color-red
+    h2 
+      font-size 35px
+    h3 
+      font-size 26px  
+  .news-columns
+    justify-content space-between    
+  .news-content
+    max-width: 700px
+  .sidebar
+    >.gb-container
+      box-shadow: 0px 0px 7.8px 4px rgba(0, 0, 0, 0.05);
+    h2 
+      color $text-color-red
+      margin-bottom 40px
+    a 
+      font-weight: 700
+      line-height: normal
+      text-decoration underline 1px
+      text-underline-offset 2px
+      color $text-color-red
+    .gb-block-image
+      width 50.7%
+    .gb-headline-text  
+      width 46%
+      flex-grow 1
+    img
+      width 100%
+      object-fit: cover  
+
++media-tablet()
+  .news-press-releases
+    .news-columns
+      display block
+    .news-content
+      margin-bottom 60px  
+    .sidebar  
+      >.gb-container
+        padding 40px 24px
+
+
