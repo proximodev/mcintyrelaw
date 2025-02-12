@@ -72,7 +72,7 @@ $getTitlesFromYoutube = get_field('get_titles_from_youtube');
             $videoPosterImageTitle = esc_attr($videoTitle);
 
             if ($getImagesFromYoutube && !empty($youTubeID)) {
-                $videoPosterImageSrc = "https://i.ytimg.com/vi/" . esc_attr($youTubeID) . "/sddefault.jpg";
+                $videoPosterImageSrc = "https://img.youtube.com/vi/" . esc_attr($youTubeID) . "/hqdefault.jpg";
             } else {
                 $imageObject = get_sub_field('image_object');
                 $videoPosterImageAttributes = (!empty($imageObject)) ? get_image_properties($imageObject, "tiles") : [];
