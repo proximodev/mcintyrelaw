@@ -17,7 +17,9 @@ $galleryImages = get_field('gallery_images');
     <h2 class="sl-gallery__title"><?= $galleryHeader; ?></h2>
     <?php endif; ?>
     <?php if($galleryDescription): ?>
-    <p class="sl-gallery__text"><?= $galleryDescription; ?></p>
+    <div class="sl-gallery__text">
+        <?= $galleryDescription; ?>
+    </div>
     <?php endif; ?>
 
     <div class="sl-gallery__inner">
