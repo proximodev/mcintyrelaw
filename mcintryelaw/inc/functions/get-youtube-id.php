@@ -18,6 +18,8 @@ function get_youtube_id_from_url($url) {
         // Extract the YouTube ID from different URL formats
         if (preg_match('/embed\/([a-zA-Z0-9_-]+)/', $src, $matches_id)) {
             return $matches_id[1];
+        } elseif (preg_match('/shorts\/([a-zA-Z0-9_-]+)/', $src, $matches_id)) {
+            return $matches_id[1];
         } elseif (preg_match('/v=([a-zA-Z0-9_-]+)/', $src, $matches_id)) {
             return $matches_id[1];
         } elseif (preg_match('/youtu\.be\/([a-zA-Z0-9_-]+)/', $src, $matches_id)) {
