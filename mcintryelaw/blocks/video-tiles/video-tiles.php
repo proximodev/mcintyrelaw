@@ -8,7 +8,7 @@ include_once( get_theme_file_path("/inc/functions/get-youtube-title.php") );
 
 $videoCount = 0;
 $additionalClass = "";
-$viewAllClass = ""; // Initialize to prevent undefined variable warning
+$viewAllClass = "";
 $tileLayoutClass = " three-col"; // Default class
 $tileStyleClass = " light-blue-bg"; // Default class
 
@@ -28,7 +28,13 @@ if (!empty($tileStyle)) {
     $tileStyleClass = " " . esc_attr($tileStyle);
 }
 
-$hideViewMoreButton = get_field('hide_view_more_button');
+if ($tileLayout == "three-col") {
+    $hideViewMoreButton = false;
+} else {
+    $hideViewMoreButton = true;
+}
+
+
 if ($hideViewMoreButton) {
     $viewAllClass = " view-all";
 }
