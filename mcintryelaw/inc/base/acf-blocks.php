@@ -52,7 +52,6 @@ function my_acf_init() {
             'category'          => 'content',
             'icon'              => 'groups',
             'keywords'          => array( 'people', 'team', 'lawyer', 'bio'),
-            'post_types'        => array('post', 'page', 'practice-area'),
             'mode'              => 'edit',
         ));
 
