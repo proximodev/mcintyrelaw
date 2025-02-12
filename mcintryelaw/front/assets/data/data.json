@@ -13,25 +13,6 @@
 			"view": "gallery"
 		}
 	},
-	"sVideoLogos": {
-		"list": [
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-1.png",
-				"logo": "assets/images/logos/logo-1.webp"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-2.png",
-				"logo": "assets/images/logos/logo-2.webp"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-3.png",
-				"logo": "assets/images/logos/logo-3.webp"
-			}
-		]
-	},
 	"sTiles": {
 		"list": [
 			{
@@ -68,31 +49,38 @@
 			}
 		]
 	},
-	"slTestimonials": {
+	"sVideoLogos": {
 		"list": [
 			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "7wtfhZwyrcc"
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-1.png",
+				"logo": "assets/images/logos/logo-1.webp"
 			},
 			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "0I647GU3Jsc"
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-2.png",
+				"logo": "assets/images/logos/logo-2.webp"
 			},
 			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "7wtfhZwyrcc"
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-3.png",
+				"logo": "assets/images/logos/logo-3.webp"
+			}
+		]
+	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
 			},
 			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "0I647GU3Jsc"
+				"img": "assets/images/slides/gallery-2.png"
 			},
 			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "7wtfhZwyrcc"
+				"img": "assets/images/slides/gallery-1.png"
 			},
 			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "0I647GU3Jsc"
+				"img": "assets/images/slides/gallery-2.png"
 			}
 		]
 	},
@@ -129,22 +117,6 @@
 			{
 				"img": "assets/images/slides/atty-4.png",
 				"title": "Monica Schweighart"
-			}
-		]
-	},
-	"slGallery": {
-		"list": [
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
 			}
 		]
 	},
@@ -194,6 +166,34 @@
 				"yt": "7wtfhZwyrcc",
 				"img": "assets/images/tiles/tile-3.png",
 				"title": "Salary Employees - Ask a Lawyer 2-29-24"
+			}
+		]
+	},
+	"slTestimonials": {
+		"list": [
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "0I647GU3Jsc"
 			}
 		]
 	}
