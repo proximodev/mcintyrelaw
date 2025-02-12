@@ -8,6 +8,11 @@ function theme_block_editor_styles() {
 }
 
 /*
+* Enable excerpt on pages
+*/
+add_post_type_support( 'page', 'excerpt' );
+
+/*
 * Remove WordPress bloat
 */
 
