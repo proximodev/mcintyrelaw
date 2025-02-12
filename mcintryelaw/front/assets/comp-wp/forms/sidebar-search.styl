@@ -1,0 +1,46 @@
+.sidebar-search
+  margin-bottom 40px
+  label
+    width: 52px;
+    height: 46px;
+    overflow: visible;
+    clip: unset;
+    clip-path: unset;
+    font-size: 0
+    &:before
+      content ''
+      display block
+      position absolute
+      left 14px
+      top 14px
+      width 18px
+      height 18px
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url(../images/icons/search-red.svg);
+  .wp-block-search__inside-wrapper     
+    display flex
+    box-shadow 0px 0px 7.8px 4px rgba(0, 0, 0, 0.05)
+    background: #fff
+    padding-left 52px
+  input
+    background: #FFF !important
+    height 46px !important
+    border: 0 !important
+    color $text-color-base !important
+    width 100%
+    font-size: 16px
+    padding 5px 16px    
+    &::placeholder
+      color #B2B2B2;
+  button 
+    border-radius 5px
+    background-color: $bg-color-red
+    width: 63px
+    min-width 63px
+    flex-shrink: 0;
+    padding 7px
+    border 0
+    margin: 0 !important
+    

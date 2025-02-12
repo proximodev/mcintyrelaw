@@ -32,42 +32,6 @@
 			}
 		]
 	},
-	"sTiles": {
-		"list": [
-			{
-				"img": "assets/images/tiles/tile-7.png",
-				"title": "Car <br> Accidents"
-			},
-			{
-				"img": "assets/images/tiles/tile-8.png",
-				"title": "Truck <br> Accidents"
-			},
-			{
-				"img": "assets/images/tiles/tile-3.png",
-				"title": "Motorcycle <br> Accidents"
-			},
-			{
-				"img": "assets/images/tiles/tile-6.png",
-				"title": "Bicycle <br> Accidents"
-			},
-			{
-				"img": "assets/images/tiles/tile-2.png",
-				"title": "Dog Bites"
-			},
-			{
-				"img": "assets/images/tiles/tile-1.png",
-				"title": "Slip and <br> Fall"
-			},
-			{
-				"img": "assets/images/tiles/tile-4.png",
-				"title": "Swimming Pool Accidents"
-			},
-			{
-				"img": "assets/images/tiles/tile-5.png",
-				"title": "Bus <br> Accidents"
-			}
-		]
-	},
 	"sVideos": {
 		"list": [
 			{
@@ -114,6 +78,70 @@
 				"yt": "7wtfhZwyrcc",
 				"img": "assets/images/tiles/tile-3.png",
 				"title": "Salary Employees - Ask a Lawyer 2-29-24"
+			}
+		]
+	},
+	"slTestimonials": {
+		"list": [
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "0I647GU3Jsc"
+			}
+		]
+	},
+	"sTiles": {
+		"list": [
+			{
+				"img": "assets/images/tiles/tile-7.png",
+				"title": "Car <br> Accidents"
+			},
+			{
+				"img": "assets/images/tiles/tile-8.png",
+				"title": "Truck <br> Accidents"
+			},
+			{
+				"img": "assets/images/tiles/tile-3.png",
+				"title": "Motorcycle <br> Accidents"
+			},
+			{
+				"img": "assets/images/tiles/tile-6.png",
+				"title": "Bicycle <br> Accidents"
+			},
+			{
+				"img": "assets/images/tiles/tile-2.png",
+				"title": "Dog Bites"
+			},
+			{
+				"img": "assets/images/tiles/tile-1.png",
+				"title": "Slip and <br> Fall"
+			},
+			{
+				"img": "assets/images/tiles/tile-4.png",
+				"title": "Swimming Pool Accidents"
+			},
+			{
+				"img": "assets/images/tiles/tile-5.png",
+				"title": "Bus <br> Accidents"
 			}
 		]
 	},
@@ -166,34 +194,6 @@
 			},
 			{
 				"img": "assets/images/slides/gallery-2.png"
-			}
-		]
-	},
-	"slTestimonials": {
-		"list": [
-			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "0I647GU3Jsc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "0I647GU3Jsc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "0I647GU3Jsc"
 			}
 		]
 	}
