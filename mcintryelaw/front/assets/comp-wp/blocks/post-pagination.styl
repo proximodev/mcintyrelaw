@@ -1,0 +1,44 @@
+.post-pagination
+  margin-top 62px !important
+  justify-content center
+  column-gap: 6px
+  .gb-button
+    min-width 34px
+    padding: 0 11px !important
+    height 34px !important
+    background-color $bg-color-white !important
+    color $text-color-red !important
+    border 1px solid $text-color-red !important
+    transition background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out !important
+    &:not(.page-numbers)
+      align-content: center
+      &:first-child:before
+      &:last-child:after 
+        content ''
+        display block
+        width 6px
+        height 6px
+        border-top 2px solid
+        border-left 2px solid
+        margin-top 2px
+      &:first-child  
+        margin-right 10px
+        &:before
+          transform rotate(-45deg)
+          margin-right 4px
+      &:last-child 
+        margin-left 10px  
+        &:after
+          transform rotate(135deg)
+          margin-left 4px
+    &:hover
+      color $bg-hover !important
+      border-color $bg-hover !important
+      background-color $bg-color-white !important
+    &.gb-block-is-current
+      background-color $bg-color-red !important
+      color $text-color-white !important
+      &:hover
+        background-color $bg-hover !important
+        border-color $bg-hover !important
+

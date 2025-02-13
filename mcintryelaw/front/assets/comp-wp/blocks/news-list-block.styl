@@ -1,0 +1,49 @@
+.news-list-block
+  >.gb-grid-column
+    &:not(:first-child)
+      padding-top 42px
+      margin-top 42px
+      border-top 1px solid $text-color-red
+.news-list-item
+  .wp-block-column
+    &:last-child
+      align-content: center
+  .gb-block-image
+    img
+      height 218px
+      object-fit: cover
+  &:not(:has(.gb-block-image))
+    .wp-block-columns
+      column-gap: 0
+    .wp-block-column:first-child
+      flex-basis: 0 !important
+  h2
+    font-size: 35px   
+    margin-bottom 14px
+  p 
+    margin-bottom 14px   
+  .wp-block-read-more 
+    font-size: 16px    
+    color $text-color-red
+    font-weight 700
+    text-transform uppercase
+    text-decoration underline 1px
+    text-underline-offset: 2px
+    trc()
+    &:hover
+      color $bg-hover
+    +p
+      display none  
+
++media-mobile(768px)
+  .news-list-item
+    .gb-block-image
+      img
+        height 320px
+
++media-mobile(600px)
+  .news-list-item
+    .gb-block-image
+      img
+        height 200px
+      
