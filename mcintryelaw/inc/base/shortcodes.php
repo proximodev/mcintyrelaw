@@ -5,7 +5,7 @@
 
 function display_published_date_shortcode() {
     if (is_single() || is_page()) {
-        return '<div class="published-date">' . get_the_date() . '</div>';
+        return '<div class="published-date">Published on ' . get_the_date() . '</div>';
     }
     return '';
 }
