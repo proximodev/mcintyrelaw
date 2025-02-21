@@ -1,0 +1,71 @@
+.resource-listing
+  margin-bottom 0 !important
+  >.wp-block-columns
+    gap 40px
+    padding-top 100px !important
+    padding-bottom 100px !important
+    justify-content space-between
+    .wp-block-column
+      &:first-child
+        max-width: 385px 
+      &:last-child
+        max-width: 740px
+  +.resource-listing
+    >.wp-block-columns
+      border-top: 1px solid $text-color-red
+
+.resource-category-wrapper
+  h3
+    font-size: 35px
+    color $text-color-red  
+    margin-bottom 30px  
+  .resource-category-image
+    margin-bottom 26px  
+.resource-articles-wrapper
+  row-gap 30px !important
+  margin-left -35px !important
+  .gb-grid-column
+    padding-left 35px !important
+.resource-article
+  padding: 28px 25px 24px !important
+  h3
+    font-size: 25px 
+    margin-bottom 12px
+    text-transform uppercase
+    text-decoration underline 1px
+    text-underline-offset: 2px  
+  a
+    font-size: 16px
+    color $text-color-red
+    font-weight 700
+    text-transform uppercase
+    text-decoration underline 1px
+    text-underline-offset: 2px  
+  p
+    height 154px  
+    overflow: hidden 
+
++media-tablet()  
+  .resource-articles-wrapper
+    .gb-grid-column
+      padding-left 20px !important
+
++media-tablet(781px)  
+  .resource-listing
+    >.wp-block-columns
+      gap 10px
+      .wp-block-column
+        &:first-child
+          max-width: 100% 
+  .resource-articles-wrapper
+    margin-left -20px !important       
+
++media-mobile(600px)     
+  .resource-articles-wrapper
+    margin-left 0 !important   
+    .gb-grid-column
+      padding-left 0 !important
+      width 100% !important
+  .resource-article    
+    p
+      height auto  

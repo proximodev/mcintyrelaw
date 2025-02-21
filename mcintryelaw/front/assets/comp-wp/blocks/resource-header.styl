@@ -2,7 +2,9 @@
   margin 56px 0 100px !important
   >.wp-block-columns
     justify-content space-between
-    .wp-block-column
+    >.wp-block-column
+      &:first-child
+        min-width 300px
       &:last-child
         max-width: 730px
         >.gb-container

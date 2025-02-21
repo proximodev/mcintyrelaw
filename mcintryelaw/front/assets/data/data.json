@@ -13,6 +13,105 @@
 			"view": "gallery"
 		}
 	},
+	"slTestimonials": {
+		"list": [
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-1.png",
+				"yt": "0I647GU3Jsc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-2.png",
+				"yt": "7wtfhZwyrcc"
+			},
+			{
+				"img": "assets/images/slides/testimonial-3.png",
+				"yt": "0I647GU3Jsc"
+			}
+		]
+	},
+	"slGallery": {
+		"list": [
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-1.png"
+			},
+			{
+				"img": "assets/images/slides/gallery-2.png"
+			}
+		]
+	},
+	"slAttorneys": {
+		"list": [
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			},
+			{
+				"img": "assets/images/slides/atty-1.png",
+				"title": "Noble McIntyre"
+			},
+			{
+				"img": "assets/images/slides/atty-2.png",
+				"title": "Jeremy Thurman"
+			},
+			{
+				"img": "assets/images/slides/atty-3.png",
+				"title": "Jordan Klingler"
+			},
+			{
+				"img": "assets/images/slides/atty-4.png",
+				"title": "Monica Schweighart"
+			}
+		]
+	},
+	"sVideoLogos": {
+		"list": [
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-1.png",
+				"logo": "assets/images/logos/logo-1.webp"
+			},
+			{
+				"yt": "0I647GU3Jsc",
+				"img": "assets/images/tiles/tile-2.png",
+				"logo": "assets/images/logos/logo-2.webp"
+			},
+			{
+				"yt": "7wtfhZwyrcc",
+				"img": "assets/images/tiles/tile-3.png",
+				"logo": "assets/images/logos/logo-3.webp"
+			}
+		]
+	},
 	"sTiles": {
 		"list": [
 			{
@@ -46,25 +145,6 @@
 			{
 				"img": "assets/images/tiles/tile-5.png",
 				"title": "Bus <br> Accidents"
-			}
-		]
-	},
-	"sVideoLogos": {
-		"list": [
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-1.png",
-				"logo": "assets/images/logos/logo-1.webp"
-			},
-			{
-				"yt": "0I647GU3Jsc",
-				"img": "assets/images/tiles/tile-2.png",
-				"logo": "assets/images/logos/logo-2.webp"
-			},
-			{
-				"yt": "7wtfhZwyrcc",
-				"img": "assets/images/tiles/tile-3.png",
-				"logo": "assets/images/logos/logo-3.webp"
 			}
 		]
 	},
@@ -114,86 +194,6 @@
 				"yt": "7wtfhZwyrcc",
 				"img": "assets/images/tiles/tile-3.png",
 				"title": "Salary Employees - Ask a Lawyer 2-29-24"
-			}
-		]
-	},
-	"slAttorneys": {
-		"list": [
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			},
-			{
-				"img": "assets/images/slides/atty-1.png",
-				"title": "Noble McIntyre"
-			},
-			{
-				"img": "assets/images/slides/atty-2.png",
-				"title": "Jeremy Thurman"
-			},
-			{
-				"img": "assets/images/slides/atty-3.png",
-				"title": "Jordan Klingler"
-			},
-			{
-				"img": "assets/images/slides/atty-4.png",
-				"title": "Monica Schweighart"
-			}
-		]
-	},
-	"slGallery": {
-		"list": [
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-1.png"
-			},
-			{
-				"img": "assets/images/slides/gallery-2.png"
-			}
-		]
-	},
-	"slTestimonials": {
-		"list": [
-			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "0I647GU3Jsc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-1.png",
-				"yt": "0I647GU3Jsc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-2.png",
-				"yt": "7wtfhZwyrcc"
-			},
-			{
-				"img": "assets/images/slides/testimonial-3.png",
-				"yt": "0I647GU3Jsc"
 			}
 		]
 	}
