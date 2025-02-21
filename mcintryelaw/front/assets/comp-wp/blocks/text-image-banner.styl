@@ -1,5 +1,5 @@
 .text-image-banner
-  padding 150px 0 70px
+  padding 110px 0 110px
   >.wp-block-columns
     position relative
     min-height: 505px
@@ -15,7 +15,7 @@
     color $text-color-blue
   p
     margin-bottom 20px  
-  .wp-block-image
+  .gb-block-image
     width 45%
     max-width 575px
     height: 100%
@@ -30,22 +30,23 @@
 
 +media-tablet()
   .text-image-banner
+    padding 90px 0
     .published-date  
       right 40px
-    .wp-block-image
+    .gb-block-image
       padding-right 40px
 
 +media-mobile()
   .text-image-banner
     padding 70px 0
     ._text-wrapper
-    .wp-block-image 
+    .gb-block-image 
       width 100%
       max-width: 100%
     .published-date  
       position static
       margin-bottom 18px  
-    .wp-block-image  
+    .gb-block-image  
       padding 0
       position static
       margin 28px 0 38px
