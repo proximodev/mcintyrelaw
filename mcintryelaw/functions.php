@@ -57,6 +57,11 @@ include( get_theme_file_path("/inc/base/block-styles.php") );
 include( get_theme_file_path("/inc/base/media.php") );
 
 /*
+* Shortcode
+*/
+include( get_theme_file_path("/inc/base/shortcodes.php") );
+
+/*
 * Utilities
 */
 include( get_theme_file_path("/inc/base/utilities.php") );
