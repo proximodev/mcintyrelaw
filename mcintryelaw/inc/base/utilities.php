@@ -69,6 +69,31 @@ function sanitize_svg( $file, $url ) {
 }
 add_filter( 'wp_check_filetype_and_ext', 'sanitize_svg', 10, 5 );
 
+/*
+* Allow VCF uploads
+*/
+function allow_vcf_uploads($mimes) {
+    // Add .vcf file support
+    $mimes['vcf'] = 'text/vcard';
+    return $mimes;
+}
+add_filter('upload_mimes', 'allow_vcf_uploads');
+
+// Ensure .vcf files are not removed by WordPress security checks
+function allow_vcf_uploads_ext($checked, $file, $filename, $mimes) {
+    if (!$checked['type']) {
+        $file_ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        if ($file_ext === 'vcf') {
+            $checked['type'] = 'text/vcard';
+            $checked['ext'] = 'vcf';
+            $checked['proper_filename'] = $filename;
+        }
+    }
+    return $checked;
+}
+add_filter('wp_check_filetype_and_ext', 'allow_vcf_uploads_ext', 10, 4);
+
+
 add_action( 'init', function() {
     register_nav_menu( 'mobile-menu', __( 'Mobile Menu' ) );
 } );
@@ -94,4 +119,14 @@ function admin_styles() {
     </style>
     <?php
 }
+
+// Search within content type
+function custom_search_filter($query) {
+    if ($query->is_search() && !is_admin() && isset($_GET['filter'])) {
+        $post_type = sanitize_text_field($_GET['filter']); // Sanitize input
+        $query->set('post_type', $post_type);
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'custom_search_filter');
 ?>
