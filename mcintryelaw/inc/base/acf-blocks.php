@@ -14,10 +14,10 @@ function my_acf_init() {
             'title'             => __('Gallery'),
             'description'       => __('Gallery compoment for photos'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'media',
+            'category'          => 'custom',
             'icon'              => 'images-alt',
             'keywords'          => array( 'people', 'team', 'lawyer', 'bio'),
-            'post_types'        => array('post', 'page', 'practice-area'),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
         ));
 
@@ -26,10 +26,10 @@ function my_acf_init() {
             'title'             => __('Gallery Slider'),
             'description'       => __('Image slider component'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'media',
+            'category'          => 'custom',
             'icon'              => 'format-image',
             'keywords'          => array( 'photo', 'gallery', 'images', 'slider'),
-            'post_types'        => array('post', 'page', 'practice-area'),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
         ));
 
@@ -38,7 +38,7 @@ function my_acf_init() {
             'title'             => __('Content Tile'),
             'description'       => __('Tile linked to pages and posts'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'content',
+            'category'          => 'custom',
             'icon'              => 'format-image',
             'keywords'          => array( 'tiles', 'content'),
             'mode'              => 'edit',
@@ -49,9 +49,20 @@ function my_acf_init() {
             'title'             => __('People'),
             'description'       => __('Tile linked to pages and posts'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'content',
+            'category'          => 'custom',
             'icon'              => 'groups',
-            'keywords'          => array( 'people', 'team', 'lawyer', 'bio'),
+            'keywords'          => array( 'people', 'team', 'lawyer', 'bio', 'people'),
+            'mode'              => 'edit',
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'resources-block',
+            'title'             => __('Resources Block'),
+            'description'       => __('Curated list of resources'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'custom',
+            'icon'              => 'images-alt',
+            'keywords'          => array( 'resource', 'post', 'block'),
             'mode'              => 'edit',
         ));
 
@@ -60,10 +71,10 @@ function my_acf_init() {
             'title'             => __('Testimonial Video Slider'),
             'description'       => __('Slider with testimonial videos'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'video',
+            'category'          => 'custom',
             'icon'              => 'format-image',
             'keywords'          => array( 'video', 'testimonial'),
-            'post_types'        => array('post', 'page', 'practice-area'),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
         ));
 
@@ -72,10 +83,10 @@ function my_acf_init() {
             'title'             => __('Video Block'),
             'description'       => __('Block with support for YouTube'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'media',
+            'category'          => 'custom',
             'icon'              => 'format-image',
             'keywords'          => array( 'media', 'video', 'youtube' ),
-            'post_types'        => array('post', 'page', 'practice-area'),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
             //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
         ));
@@ -86,10 +97,10 @@ function my_acf_init() {
             'title'             => __('Video Tiles'),
             'description'       => __('List of videos in tile format with support for YouTube'),
             'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'media',
+            'category'          => 'custom',
             'icon'              => 'format-image',
             'keywords'          => array( 'media', 'video', 'youtube' ),
-            'post_types'        => array('post', 'page', 'practice-area'),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
             //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
         ));
