@@ -59,7 +59,24 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
    
 .no-padding-bottom
   padding-top: 0px !important;
-    
+   
+#map-section .map-container
+  position: relative;
+  width: 100%;
+  height: 450px;
+
+#map-section .map-overlay
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+  
+#map-section .icon-contact > img
+  margin-bottom: 5px
+  
 +media-tablet()
   .gb-container.full-width > .gb-container, 
   .gb-container.full-width > .wp-block-columns,
