@@ -14,43 +14,59 @@
     > .wp-block-columns
       border-top: 1px solid $text-color-red
   &._rows
-    padding 66px 0
+    padding 66px 80px 80px 80px
+    background-color: #F7F7F7;
+    margin-bottom: $container-padding-desktop
     h3
       font-size: 35px
       color $text-color-red  
-      margin-bottom 60px 
-    .resource-item 
-      column-gap: 0
-      width auto
-      h4 
-        line-height: 0
-        a
+      margin-bottom 60px
+    .gb-grid-wrapper
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      row-gap: 30px;
+      .resource-item 
+        display: flex;
+        align-items: flex-start;
+        row-gap: 0px;
+        position: relative;
+        column-gap: 0
+        width auto
+        h4 
+          line-height: 0
+          margin-bottom: 5px
+          a
+            font-size: 16px
+            font-family: "Open Sans", sans-serif
+            font-weight 700
+            line-height 1.3
+        .gb-headline-text
+          text-decoration underline 1px
+          text-underline-offset: 2px
+        div.gb-headline-text
           font-size: 16px
-          font-family: "Open Sans", sans-serif
-          font-weight 700
-          line-height 1.3
-      .gb-headline-text
-        text-decoration underline 1px
-        text-underline-offset: 2px
-      div.gb-headline-text
-        font-size: 16px
-        position relative
-        a
-          font-size: 0
-          position absolute
-          left 0
-          top 0
-          width 100%
-          height 100%  
-    .resource-image-wrapper  
-      width auto      
-      figure
-        padding-right 30px
-      img
-        width 249px
-        height 132px
-        object-fit: cover
-        max-width: none
+          position relative
+          a
+            font-size: 0
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%  
+      .resource-image-wrapper  
+        width auto      
+        figure
+          padding-right 30px
+        img
+          width 249px
+          height 132px
+          object-fit: cover
+          max-width: none
+          transition: opacity 0.3s ease-in-out
+
+.resource-listing._rows .resource-item .gb-container-link:hover ~ .resource-image-wrapper figure img 
+  opacity: 0.6;
 
 .resource-category-wrapper
   h3
@@ -88,6 +104,9 @@
     overflow: hidden 
 
 +media-tablet()  
+  .resource-listing._rows
+    padding 60px 60px 70px 60px
+    margin-bottom: $container-padding-tablet
   .resource-articles-wrapper
     .gb-grid-column
       padding-left 20px !important
@@ -98,22 +117,25 @@
       gap 10px
       .wp-block-column
         &:first-child
-          max-width: 100% 
+          max-width: 100%
   .resource-articles-wrapper
     margin-left -20px !important       
 
 +media-mobile(600px)     
   .resource-listing._rows
-    padding-top 30px
+    padding 40px 30px 50px 30px
+    margin-bottom: $container-padding-mobile
     h3
-      margin-bottom 40px
+      margin-bottom 20px
     .resource-item 
-      display block
+      display: block !important
+      .gb-headline-text
+        margin-bottom: 10px 
       figure
-        padding 0 0 20px
+        padding 0 0 20px 0 !important
       img
-        width 100%
-        height 178px
+        width 100% !important
+        height 178px  !important
       
   .resource-articles-wrapper
     margin-left 0 !important   

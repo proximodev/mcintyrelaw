@@ -7,13 +7,6 @@ $resourceBlockTitle = get_field( 'resource_block_title');
 ?>
 
 <style>
-.gb-grid-wrapper-2e545a2e {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    row-gap: 30px;
-}
-
 .gb-container-54f50a14 {
     display: flex;
     align-items: flex-start;
@@ -23,10 +16,10 @@ $resourceBlockTitle = get_field( 'resource_block_title');
 }
 </style>
 
-<section class="gb-container gb-container-e7b32892 resource-listing _rows full-width">
-   <div class="gb-container gb-container-b5abfc4e resource-listing-inner inside-padding">
+<section class="gb-container gb-container-e7b32892 resource-listing _rows">
+   <div class="gb-container gb-container-b5abfc4e resource-listing-inner">
       <h3 class="wp-block-heading has-text-align-center"><?= $resourceBlockTitle; ?></h3>
-      <div class="gb-grid-wrapper gb-grid-wrapper-2e545a2e gb-query-loop-wrapper">
+      <div class="gb-grid-wrapper gb-query-loop-wrapper">
 
         <?php
         if( have_rows('resources') ):
