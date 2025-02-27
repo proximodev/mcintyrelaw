@@ -9,7 +9,7 @@ from datetime import datetime
 import pandas as pd
 
 # Declare current working directory
-cwd = '/home/wp_8ijmaa/mcintyrelaw.com/wp-content/themes/mcintyre-law/data/'
+cwd = '/home/outspokendev/dev.mcintyrelaw.com/wp-content/themes/mcintyrelaw/data/'
 
 # Set web driver options
 options = FirefoxOptions()
