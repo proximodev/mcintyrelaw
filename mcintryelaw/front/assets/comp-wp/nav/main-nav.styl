@@ -16,7 +16,7 @@
     >li:not(.mega-menu-megamenu)
       .mega-sub-menu
         box-shadow: 0 10px 10px rgba(0,0,0,0.05) !important
-    >li.mega-current-menu-ancestor
+    >li.mega-current-menu-ancestor, mega-menu-link
       >a
         background: 0 0!important;
         border-color: #a21d21!important;
@@ -49,6 +49,8 @@
           margin-left 4px
         .mega-indicator
           display none !important
+      >a[aria-expanded="true"]
+        border-color: #a21d21!important;
     .mega-sub-menu
       a 
         color: $text-color-dark !important
@@ -195,7 +197,7 @@
                   trt()    
         .sub-menu  
           a
-            font-weight: 400;     
+            font-weight: 400;
           .mega-menu-item.label
             a 
               display inline-flex
