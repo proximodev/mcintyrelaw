@@ -1,0 +1,32 @@
+.rating-block
+  h3.rating-score-headline, h4.rating-score-headline
+    font-size: 50px
+  .rating-score-text
+    width: 60px
+    line-height: 1.2
+  .rating
+    font-size: 50px
+    position: relative
+    display: inline-block
+    color: transparent
+    top: -14px
+  &.stars-5-0
+    width: 100%  
+  &.stars-4-5
+    width: 90%
+  &.stars-4-0
+    width: 90%
+  .rating::before
+    position: absolute
+    top: 0px
+    left: 0px
+    content: "★★★★★"
+    color: transparent
+  .rating::after
+    position: absolute
+    top: 0px
+    left: 0px
+    content: "★★★★★"
+    color: gold
+    overflow: hidden
+      
