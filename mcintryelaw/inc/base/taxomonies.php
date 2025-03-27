@@ -2,5 +2,4 @@
 /**
  * Custom Taxonomies
  */
-
 ?>

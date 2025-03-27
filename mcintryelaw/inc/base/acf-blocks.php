@@ -86,7 +86,6 @@ function my_acf_init() {
             'category'          => 'custom',
             'icon'              => 'format-image',
             'keywords'          => array( 'media', 'video', 'youtube' ),
-            'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
             //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
         ));
@@ -102,7 +101,30 @@ function my_acf_init() {
             'keywords'          => array( 'media', 'video', 'youtube' ),
             'post_types'        => array('post', 'page', 'practice-area', 'people'),
             'mode'              => 'edit',
-            //'enqueue_style'     => get_stylesheet_directory_uri . '/template-parts/blocks/media-block/media-block.css',
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'video-tiles-make-your-case',
+            'title'             => __('Video Tiles (Make Your Case)'),
+            'description'       => __('List of videos in tile format with support for Sooner Sports'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'custom',
+            'icon'              => 'format-image',
+            'keywords'          => array( 'media', 'video', 'youtube' ),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
+            'mode'              => 'edit',
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'video-block-make-your-case',
+            'title'             => __('Video Block (Make Your Case)'),
+            'description'       => __('Video with support for Sooner Sports'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'custom',
+            'icon'              => 'format-image',
+            'keywords'          => array( 'media', 'video', 'youtube' ),
+            'post_types'        => array('post', 'page', 'practice-area', 'people'),
+            'mode'              => 'edit',
         ));
 
     }

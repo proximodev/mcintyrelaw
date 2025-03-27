@@ -120,6 +120,24 @@ function admin_styles() {
     <?php
 }
 
+add_filter('wpseo_breadcrumb_links', function ($links) {
+    if (is_tax()) {
+        foreach ($links as &$link) {
+            if (!empty($link['url']) && strpos($link['url'], 'practice-area-types/') !== false) {
+                $link['url'] = str_replace('practice-area-types/', '', $link['url']);
+                error_log('URL matched: ' . $link['url']);
+            } else {
+                error_log('URL not matched: ' . $link['url']);
+            }
+        }
+    }
+
+    return $links;
+});
+
+// Disable Yoast breadcrumb caching temporarily
+add_filter('wpseo_breadcrumb_cache', '__return_false');
+
 // Search within content type
 function custom_search_filter($query) {
     if ($query->is_search() && !is_admin() && isset($_GET['filter'])) {

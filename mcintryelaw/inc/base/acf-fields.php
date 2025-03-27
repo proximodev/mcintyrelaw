@@ -1,6 +1,0 @@
-<?php
-/**
-* ACF Custom Fields
-**/
-
-?>
