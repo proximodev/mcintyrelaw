@@ -16,7 +16,9 @@
       font-weight 400  
 
 .container.grid-container .site-content main article .inside-article section.gb-container,
-.container.grid-container .site-content main article .inside-article section.wp-block-group
+.container.grid-container .site-content main article .inside-article section.wp-block-group,
+.archive .container.grid-container .site-content main section.gb-container,
+.archive .container.grid-container .site-content main section.wp-block-group
   margin-bottom 60px
 
 .grid-container.container
@@ -77,6 +79,34 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
 #map-section .icon-contact > img
   margin-bottom: 5px
   
+.pull-up-300
+  position: relative
+  top: -300px
+  margin-bottom: -280px !important
+  
+.pull-up-200
+  position: relative
+  top: -200px
+  margin-bottom: -180px !important
+
+.pull-up-100
+  position: relative
+  top: -100px
+  margin-bottom: -80px !important
+
+.responsive-iframe-wrapper
+   position: relative;
+   width: 100%;
+   padding-top: 56.25%;
+
+.responsive-iframe-wrapper iframe
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: 0;
+
 +media-tablet()
   .gb-container.full-width > .gb-container, 
   .gb-container.full-width > .wp-block-columns,
@@ -91,6 +121,11 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
     padding-top $container-padding-tablet
     padding-bottom $container-padding-tablet
 
+  .pull-up-300, .pull-up-200, .pull-up-100
+    position: relative
+    top: 0px
+    margin-bottom: 0px !important
+    
 +media-mobile(768px)
   .one-container .site-content
     padding-top: 0 !important;
