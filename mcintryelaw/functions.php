@@ -15,13 +15,14 @@ function theme_styles() {
 
     wp_dequeue_style( 'generate-child-css' );
     wp_deregister_style( 'generate-child-css' );
-    wp_enqueue_style( 'mcintryelaw-child', get_stylesheet_directory_uri() . '/style.css', array() , $verRnd, false );
+    wp_enqueue_style( 'mcintryelaw-child', get_stylesheet_directory_uri() . '/style.css', array() , CHILD_THEME_VERSION, false );
     wp_enqueue_style( 'common-css', get_stylesheet_directory_uri() . '/assets/css/common.css', array() , $verRnd, false);
 
     wp_enqueue_script( 'jquery', get_stylesheet_directory_uri() . '/assets/js/jquery.min.js', array(), CHILD_THEME_VERSION, false );
     wp_enqueue_script( 'modal', get_stylesheet_directory_uri() . '/assets/js/modal.js', array(), CHILD_THEME_VERSION, true );
     wp_enqueue_script( 'slick', get_stylesheet_directory_uri() . '/assets/js/slick.min.js', array(), CHILD_THEME_VERSION, true );
-    wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/assets/js/app.js', array(), $verRnd, true );
+    wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/assets/js/app.js', array(), CHILD_THEME_VERSION, true );
+    wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array(), CHILD_THEME_VERSION, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
