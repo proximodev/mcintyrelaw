@@ -31,15 +31,16 @@
     padding-top 64px !important
     >.gb-container 
       padding 0 20px
+      margin-left -5px !important
       flex-direction: column
       position relative
     #hero-image-wrapper 
       align-self: center;
-      margin-left: 25%;
+      margin-left: 0%;
       width: 500px
     #hero-text
       padding 10px 0 10px 16px  
-      border-left: 7px solid $text-color-red
+      border-left: 7px solid $white
       margin-right 0
       flex-basis: auto
     h2 
@@ -53,3 +54,9 @@
       right 0
       bottom 130px  
       justify-content center
+      
++media-mobile(400px)
+  .block-home-hero
+    .gb-container.full-width
+    #hero-image-wrapper
+      width: 470px
