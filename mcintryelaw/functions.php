@@ -11,12 +11,12 @@ define( 'CHILD_THEME_VERSION', $ver);
 function theme_styles() {
 
     // Dev only
-    $verRnd = rand();
+    //$verRnd = rand();
 
     wp_dequeue_style( 'generate-child-css' );
     wp_deregister_style( 'generate-child-css' );
     wp_enqueue_style( 'mcintryelaw-child', get_stylesheet_directory_uri() . '/style.css', array() , CHILD_THEME_VERSION, false );
-    wp_enqueue_style( 'common-css', get_stylesheet_directory_uri() . '/assets/css/common.css', array() , $verRnd, false);
+    wp_enqueue_style( 'common-css', get_stylesheet_directory_uri() . '/assets/css/common.css', array() , CHILD_THEME_VERSION, false);
 
     wp_enqueue_script( 'jquery', get_stylesheet_directory_uri() . '/assets/js/jquery.min.js', array(), CHILD_THEME_VERSION, false );
     wp_enqueue_script( 'modal', get_stylesheet_directory_uri() . '/assets/js/modal.js', array(), CHILD_THEME_VERSION, true );
