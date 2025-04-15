@@ -65,6 +65,9 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
 .wp-block-spacer.spacer-medium
   height: 60px !important
 
+#featured_image_mobile_align
+	display: none;
+
 #map-section .map-container
   position: relative;
   width: 100%;
@@ -143,6 +146,18 @@ section.gb-container.text-block-container > .wp-block-group > .wp-block-group__i
   .wp-block-columns > .wp-block-column > ul.wp-block-list
     margin: 0 0 0em 3em;
 
+  img.mobile-center-right
+    object-position: right center !important;
+
+  img.mobile-center-75
+    object-position: 75% center !important;
+  
+  img.mobile-center-left
+    object-position: left center !important;
+  
+  img.mobile-center-25
+    object-position: 25% center !important;
+  
 +media-mobile()
   ._mobile
     display block
