@@ -11,4 +11,14 @@ $document.ready(function() {
         $('#map-overlay').show(); // Restore overlay when mouse leaves
     });
 
+    var bannerImage = $('#basic-banner-image');
+    var alignValue = $('#featured_image_mobile_align').text().trim();
+
+    if (alignValue && bannerImage.length) {
+        console.log("alignValue: " + alignValue);
+        bannerImage
+            .removeClass('align-left align-center align-right')
+            .addClass(alignValue);
+    }
+
 });
