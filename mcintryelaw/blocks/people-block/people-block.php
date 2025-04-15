@@ -48,7 +48,7 @@ $buttonURL = get_field( 'button_url');
                     <a href="<?= $personLink; ?>">
                         <div class="sl-attorneys__item">
                             <img class="sl-attorneys__img" src="<?= $personImageSrc; ?>" alt="<?= $personImageAlt; ?>"/>
-                            <h5 class="sl-attorneys__item-title"><?= $personName; ?></h5>
+                            <p class="sl-attorneys__item-title"><?= $personName; ?></p>
                         </div>
                     </a>
                 <?php endforeach; ?>
