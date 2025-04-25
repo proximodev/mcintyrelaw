@@ -138,7 +138,7 @@
 <div class="container">
   <div class="row mobile-flex">
     <div class="sidebar col-md-3 mobile-order-2">
-      <img class="img-svg img-responsive mb-40" style="min-height: 43px;" alt="McIntyre Law P.C." src="https://mcintyrelaw.com/wp-content/themes/mcintyre-law/img/logos/mcintyre-law.svg">
+      <img class="img-svg img-responsive mb-40" style="min-height: 43px;" alt="McIntyre Law P.C." src="https://mcintyrelaw.com/wp-content/themes/mcintyrelaw/img/logos/mcintyre-law.svg">
       <div class="stats">
         <div class="top">
           <p class="text-center text-light"><strong>Accidents in OKC today:</strong></p>
